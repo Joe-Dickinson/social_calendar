@@ -1,10 +1,18 @@
 SocialCalendar::Application.routes.draw do
-  devise_for :participants
+  # You can have the root of your site routed with "root"
+  # devise_scope :participants do
+    root 'pages#home'#, :to => redirect('/participants/sign_in')
+  # end
+  
+  devise_for :participants #, :controllers => { :registrations => "registrations"}
+  resources :participants
+
+  # devise_scope :participant do
+    # get 'participant/sign_up', :to => '#registrations#new'
+  # end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
-  # You can have the root of your site routed with "root"
-  # root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
