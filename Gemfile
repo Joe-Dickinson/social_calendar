@@ -29,12 +29,16 @@ gem 'koala'
 
 gem 'httparty'
 
+gem 'devise'
+
 group :test, :development do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
   
   gem 'rspec-rails'
+
+  gem 'shoulda-matchers'
 end
 
 group :doc do
