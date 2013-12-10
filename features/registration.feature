@@ -1,5 +1,4 @@
 Feature: Registration
-    @wip
   Scenario: A participant signs up
     Given a participant is on the registration page
     And he enters valid information

@@ -315,3 +315,392 @@ Processing by ParticipantsController#show as HTML
   Rendered participants/show.html.erb within layouts/application (2.4ms)
 Completed 200 OK in 12ms (Views: 3.9ms | ActiveRecord: 1.3ms)
   [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:31:37 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (69.4ms)
+Completed 200 OK in 128ms (Views: 83.4ms | ActiveRecord: 4.2ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:33:18 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (66.8ms)
+Completed 200 OK in 131ms (Views: 80.0ms | ActiveRecord: 4.0ms)
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:33:18 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mParticipant Load (1.4ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 8ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:36:23 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 127ms (Views: 80.7ms | ActiveRecord: 4.0ms)
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:36:23 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mParticipant Load (1.2ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 5ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:36:50 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 124ms (Views: 79.1ms | ActiveRecord: 4.1ms)
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:36:50 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mParticipant Load (1.3ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 5ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:37:27 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (67.4ms)
+Completed 200 OK in 126ms (Views: 81.0ms | ActiveRecord: 3.9ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:38:22 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (68.0ms)
+Completed 200 OK in 131ms (Views: 82.0ms | ActiveRecord: 4.3ms)
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:38:22 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mParticipant Load (1.2ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 5ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:39:15 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (71.1ms)
+Completed 200 OK in 131ms (Views: 85.5ms | ActiveRecord: 4.0ms)
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:39:15 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mParticipant Load (1.2ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 5ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:54:51 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (67.1ms)
+Completed 200 OK in 125ms (Views: 80.7ms | ActiveRecord: 4.1ms)
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:54:51 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mParticipant Load (1.4ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 5ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:56:53 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.6ms)
+Completed 200 OK in 167ms (Views: 111.7ms | ActiveRecord: 5.3ms)
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:56:54 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mParticipant Load (1.3ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 7ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:58:01 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 158ms (Views: 111.8ms | ActiveRecord: 4.0ms)
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:58:02 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mParticipant Load (2.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 11ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 10ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+  [1m[36m (4.1ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:15:57 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (28.2ms)
+Completed 200 OK in 162ms (Views: 110.1ms | ActiveRecord: 5.1ms)
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:15:57 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mParticipant Load (6.4ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 15ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 4.6ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:17:54 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.7ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 171ms (Views: 115.9ms | ActiveRecord: 5.3ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:30:04 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (29.9ms)
+Completed 200 OK in 212ms (Views: 110.6ms | ActiveRecord: 4.7ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:30:21 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 171ms (Views: 80.4ms | ActiveRecord: 4.0ms)
+  [1m[35mParticipant Exists (1.0ms)[0m  SELECT 1 AS one FROM "participants" WHERE "participants"."email" = 'd@d.com' LIMIT 1
+  [1m[36mSQL (5.4ms)[0m  [1mINSERT INTO "participants" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 19:30:21 UTC +00:00], ["email", "d@d.com"], ["encrypted_password", "$2a$04$Qxuz0x0cC.VZMK6PdS6Dj.az9e1.KL6pGRQTBouC1/HKIb1gPw2sK"], ["name", "David"], ["updated_at", Tue, 10 Dec 2013 19:30:21 UTC +00:00]]
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", 2]]
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:30:22 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mParticipant Load (0.8ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."email" = 'b@b.com' ORDER BY "participants"."id" ASC LIMIT 1[0m
+Completed 401 Unauthorized in 7ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"b@b.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.6ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 10ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:32:40 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (65.6ms)
+Completed 200 OK in 124ms (Views: 79.4ms | ActiveRecord: 3.9ms)
+  [1m[35mParticipant Exists (0.9ms)[0m  SELECT 1 AS one FROM "participants" WHERE "participants"."email" = 'd@d.com' LIMIT 1
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "participants" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 19:32:41 UTC +00:00], ["email", "d@d.com"], ["encrypted_password", "$2a$04$vXGOBygQLF0GZ9YnInvlhenPO0FsD7uBditAwiEu9vNBaI7tk4yPq"], ["name", "David"], ["updated_at", Tue, 10 Dec 2013 19:32:41 UTC +00:00]]
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", 3]]
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:32:41 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"d@d.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mParticipant Load (1.4ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."email" = 'd@d.com' ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "participants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "participants"."id" = 3  [["last_sign_in_at", Tue, 10 Dec 2013 19:32:41 UTC +00:00], ["current_sign_in_at", Tue, 10 Dec 2013 19:32:41 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 10 Dec 2013 19:32:41 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 88ms (ActiveRecord: 2.6ms)
+Started GET "/" for 127.0.0.1 at 2013-12-10 19:32:41 +0000
+Processing by ParticipantsController#index as HTML
+  [1m[36mParticipant Load (0.6ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 3 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" IS NULL LIMIT 1
+Redirected to http://www.example.com/participants/3
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+Started GET "/participants/3" for 127.0.0.1 at 2013-12-10 19:32:41 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mParticipant Load (0.6ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 3 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.6ms)[0m  SELECT "events".* FROM "events"
+  Rendered participants/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 16ms (Views: 5.5ms | ActiveRecord: 1.2ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:33:03 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (73.9ms)
+Completed 200 OK in 134ms (Views: 88.5ms | ActiveRecord: 3.8ms)
+  [1m[35mParticipant Exists (1.1ms)[0m  SELECT 1 AS one FROM "participants" WHERE "participants"."email" = 'd@d.com' LIMIT 1
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "participants" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 19:33:03 UTC +00:00], ["email", "d@d.com"], ["encrypted_password", "$2a$04$dJ45PpOXaTGnfQ8CuK1u6.a64d9.kAWC22t/Wn7GTOdnjaoSZdM5i"], ["name", "David"], ["updated_at", Tue, 10 Dec 2013 19:33:03 UTC +00:00]]
+  [1m[35mParticipant Load (0.6ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", 4]]
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:33:03 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"d@d.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mParticipant Load (0.8ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."email" = 'd@d.com' ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE "participants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "participants"."id" = 4  [["last_sign_in_at", Tue, 10 Dec 2013 19:33:03 UTC +00:00], ["current_sign_in_at", Tue, 10 Dec 2013 19:33:03 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 10 Dec 2013 19:33:03 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 15ms (ActiveRecord: 1.6ms)
+Started GET "/" for 127.0.0.1 at 2013-12-10 19:33:03 +0000
+Processing by ParticipantsController#index as HTML
+  [1m[36mParticipant Load (0.9ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 4 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" IS NULL LIMIT 1
+Redirected to http://www.example.com/participants/4
+Completed 302 Found in 5ms (ActiveRecord: 1.4ms)
+Started GET "/participants/4" for 127.0.0.1 at 2013-12-10 19:33:03 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mParticipant Load (0.4ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 4 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+  Rendered participants/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 61ms (Views: 4.0ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:38:47 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (66.2ms)
+Completed 200 OK in 125ms (Views: 79.9ms | ActiveRecord: 4.3ms)
+  [1m[35mParticipant Exists (0.9ms)[0m  SELECT 1 AS one FROM "participants" WHERE "participants"."email" = 'd@d.com' LIMIT 1
+  [1m[36mSQL (3.2ms)[0m  [1mINSERT INTO "participants" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 19:38:47 UTC +00:00], ["email", "d@d.com"], ["encrypted_password", "$2a$04$MgHVgitY143KxBfQrRXxE.ZV5upGeQ6c1ca.XAJ7MTDh70845NfUy"], ["name", "David"], ["updated_at", Tue, 10 Dec 2013 19:38:47 UTC +00:00]]
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:39:10 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (2.0ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 178ms (Views: 85.9ms | ActiveRecord: 4.1ms)
+  [1m[35mParticipant Exists (1.3ms)[0m  SELECT 1 AS one FROM "participants" WHERE "participants"."email" = 'd@d.com' LIMIT 1
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "participants" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 19:39:10 UTC +00:00], ["email", "d@d.com"], ["encrypted_password", "$2a$04$p/YrmksPVuJkXgnZXHVnqeDgUd69.6wsLg9iW.t4SYv2tS/39YTfy"], ["name", "David"], ["updated_at", Tue, 10 Dec 2013 19:39:10 UTC +00:00]]
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:39:38 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (15.5ms)
+Completed 200 OK in 176ms (Views: 80.5ms | ActiveRecord: 4.2ms)
+  [1m[35mParticipant Exists (1.0ms)[0m  SELECT 1 AS one FROM "participants" WHERE "participants"."email" = 'd@d.com' LIMIT 1
+  [1m[36mSQL (3.7ms)[0m  [1mINSERT INTO "participants" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 19:39:38 UTC +00:00], ["email", "d@d.com"], ["encrypted_password", "$2a$04$5Oh6ZfDmWfO3VG6k5agu1uMmTZoh78csaE3te1v1UsQIcTtF/jo0S"], ["name", "David"], ["updated_at", Tue, 10 Dec 2013 19:39:38 UTC +00:00]]
+  [1m[35mParticipant Load (0.6ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "events" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 19:39:38 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."], ["title", "Nine Worlds Geek Fest 2014"], ["updated_at", Tue, 10 Dec 2013 19:39:38 UTC +00:00], ["url", "https://nineworlds.co.uk/"]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 1]]
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:39:38 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"d@d.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mParticipant Load (0.8ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."email" = 'd@d.com' ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (0.8ms)[0m  UPDATE "participants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "participants"."id" = 7  [["last_sign_in_at", Tue, 10 Dec 2013 19:39:38 UTC +00:00], ["current_sign_in_at", Tue, 10 Dec 2013 19:39:38 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 10 Dec 2013 19:39:38 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 15ms (ActiveRecord: 1.6ms)
+Started GET "/" for 127.0.0.1 at 2013-12-10 19:39:38 +0000
+Processing by ParticipantsController#index as HTML
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 7 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" IS NULL LIMIT 1
+Redirected to http://www.example.com/participants/7
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+Started GET "/participants/7" for 127.0.0.1 at 2013-12-10 19:39:38 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mParticipant Load (0.4ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 7 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.3ms)[0m  SELECT "events".* FROM "events"
+  Rendered participants/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:40:13 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 180ms (Views: 85.5ms | ActiveRecord: 4.0ms)
+  [1m[35mParticipant Exists (1.2ms)[0m  SELECT 1 AS one FROM "participants" WHERE "participants"."email" = 'd@d.com' LIMIT 1
+  [1m[36mSQL (3.6ms)[0m  [1mINSERT INTO "participants" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 19:40:13 UTC +00:00], ["email", "d@d.com"], ["encrypted_password", "$2a$04$j.K0xGTdko0XAJSSWMci7.2oEjEYsYrARxOg2iFfX4DcTl/G13dDu"], ["name", "David"], ["updated_at", Tue, 10 Dec 2013 19:40:13 UTC +00:00]]
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "events" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 19:40:13 UTC +00:00], ["description", "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."], ["title", "Nine Worlds Geek Fest 2014"], ["updated_at", Tue, 10 Dec 2013 19:40:13 UTC +00:00], ["url", "https://nineworlds.co.uk/"]]
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events" WHERE "events"."id" = $1 LIMIT 1  [["id", 2]]
+Started POST "/participants/sign_in" for 127.0.0.1 at 2013-12-10 19:40:13 +0000
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"email"=>"d@d.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mParticipant Load (0.9ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."email" = 'd@d.com' ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mSQL (1.0ms)[0m  UPDATE "participants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "participants"."id" = 8  [["last_sign_in_at", Tue, 10 Dec 2013 19:40:13 UTC +00:00], ["current_sign_in_at", Tue, 10 Dec 2013 19:40:13 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 10 Dec 2013 19:40:13 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 15ms (ActiveRecord: 1.9ms)
+Started GET "/" for 127.0.0.1 at 2013-12-10 19:40:13 +0000
+Processing by ParticipantsController#index as HTML
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 8 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" IS NULL LIMIT 1
+Redirected to http://www.example.com/participants/8
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+Started GET "/participants/8" for 127.0.0.1 at 2013-12-10 19:40:13 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 8 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered participants/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.4ms)[0m  [1mROLLBACK[0m

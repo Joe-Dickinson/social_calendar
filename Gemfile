@@ -24,26 +24,20 @@ gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
-
 gem 'koala'
-
 gem 'httparty'
-
 gem 'devise'
-
 gem 'pry'
-
 gem 'pry-byebug'
-
+gem 'launchy'
 
 group :test, :development do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended
   gem 'database_cleaner'
-  
   gem 'rspec-rails'
-
   gem 'shoulda-matchers'
+  gem 'machinist', '>= 2.0.0.beta2'
 end
 
 group :doc do

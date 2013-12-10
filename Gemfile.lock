@@ -83,6 +83,9 @@ GEM
       addressable
       faraday
       multi_json
+    launchy (2.3.0)
+      addressable (~> 2.3)
+    machinist (2.0)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -183,6 +186,8 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   koala
+  launchy
+  machinist (>= 2.0.0.beta2)
   pg
   pry
   pry-byebug
