@@ -18749,3 +18749,1552 @@ Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 16:49:58
 
 
 Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 16:49:58 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  Rendered participants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:39 +0000
+
+
+Started GET "/participants/2/profile" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+Processing by ParticipantsController#profile as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mParticipant Load (0.4ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered participants/profile.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:41 +0000
+
+
+Started GET "/participants/1/profile" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+Processing by ParticipantsController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mParticipant Load (0.6ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mParticipant Load (0.4ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1[0m  [["id", "1"]]
+  Rendered participants/profile.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:44 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  Rendered participants/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 16:56:46 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  Rendered participants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 16:59:21 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.6ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  Rendered participants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:49 +0000
+
+
+Started GET "/participants/2/profile" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+Processing by ParticipantsController#profile as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParticipant Load (1.0ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", "2"]]
+  Rendered participants/profile.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 8ms (Views: 5.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:51 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParticipant Load (0.4ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  Rendered participants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:23:52 +0000
+
+
+Started GET "/participants/2/profile" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+Processing by ParticipantsController#profile as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered participants/profile.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:27:35 +0000
+
+
+Started GET "/participants/2/profile" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+Processing by ParticipantsController#profile as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered participants/profile.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:28:56 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:28:57 +0000
+
+
+Started GET "/participants//profile" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"profile"}
+  [1m[35mParticipant Load (0.4ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  Rendered participants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 5.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:00 +0000
+
+
+Started GET "/participants/1/profile" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+Processing by ParticipantsController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered participants/profile.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:06 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  Rendered participants/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:08 +0000
+
+
+Started GET "/participants/1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mParticipant Load (0.4ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  Rendered participants/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:11 +0000
+
+
+Started GET "/participants/1/profile" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+Processing by ParticipantsController#profile as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mParticipant Load (0.4ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1  [["id", "1"]]
+  Rendered participants/profile.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 9ms (Views: 5.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:14 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  Rendered participants/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:29:17 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:36:35 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.5ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered participants/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 88ms (Views: 5.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:35 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:35 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:35 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:36 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:36:37 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered participants/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 7ms (Views: 4.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:36:38 +0000
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (47.5ms)[0m  INSERT INTO "events" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 10 Dec 2013 17:42:46 UTC +00:00], ["description", "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."], ["title", "Nine Worlds Geek Fest 2014"], ["updated_at", Tue, 10 Dec 2013 17:42:46 UTC +00:00], ["url", "https://nineworlds.co.uk/"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mEvent Load (0.5ms)[0m  SELECT "events".* FROM "events"
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:43:09 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered participants/show.html.erb within layouts/application (74.1ms)
+Completed 500 Internal Server Error in 78ms
+
+ActionView::Template::Error (undefined method `event_profile' for #<#<Class:0x007f92c0c915a8>:0x007f92bd14d5f0>):
+    13: <% @events.each do |e| %>
+    14:   <h2> <%= e.title %> </h2>
+    15:   <%= e.url %>
+    16:   <%= truncate(e.description, :length => 50) {link_to "Continue", event_profile(e) } %>
+    17:   Hosted by: <%= e.organiser %> 
+    18: <% end %>
+  app/views/participants/show.html.erb:16:in `block (2 levels) in _app_views_participants_show_html_erb___3396521595600978446_70134138198940'
+  app/views/participants/show.html.erb:16:in `block in _app_views_participants_show_html_erb___3396521595600978446_70134138198940'
+  app/views/participants/show.html.erb:13:in `_app_views_participants_show_html_erb___3396521595600978446_70134138198940'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.0.0-p247/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (8.2ms)
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:44:17 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.7ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered participants/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:44:18 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered participants/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 9ms (Views: 6.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:45:35 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered participants/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 9ms (Views: 5.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:25 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.4ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered participants/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 8ms (Views: 5.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:46:45 +0000
+  [1m[36m (0.4ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "events" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", Tue, 10 Dec 2013 17:49:53 UTC +00:00], ["description", "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."], ["title", "Skydiving"], ["updated_at", Tue, 10 Dec 2013 17:49:53 UTC +00:00], ["url", "https://khaskdfasdf.com"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "events" ("created_at", "description", "title", "updated_at", "url") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 17:50:24 UTC +00:00], ["description", "Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua."], ["title", "Busking"], ["updated_at", Tue, 10 Dec 2013 17:50:24 UTC +00:00], ["url", "https://asdukfhausdfb.com"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.4ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered participants/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:28 +0000
+
+
+Started GET "/participants/2/profile" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+Processing by ParticipantsController#profile as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.6ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered participants/profile.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 4.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:50:44 +0000
+
+
+Started GET "/participants/2/profile" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+Processing by ParticipantsController#profile as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.6ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mParticipant Load (0.3ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = $1 LIMIT 1[0m  [["id", "2"]]
+  Rendered participants/profile.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:37 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+  [1m[36mEvent Load (0.3ms)[0m  [1mSELECT "events".* FROM "events"[0m
+  Rendered participants/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 17:52:39 +0000
+
+
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[35mParticipant Load (0.5ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+Processing by ParticipantsController#index as HTML
+  [1m[36mParticipant Load (0.4ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mParticipant Load (0.3ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" IS NULL LIMIT 1
+Redirected to http://localhost:3000/participants/2
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mParticipant Load (0.5ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 2 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.4ms)[0m  SELECT "events".* FROM "events"
+  Rendered participants/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 10ms (Views: 7.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 18:03:40 +0000
+
+
+Started GET "/participants/2" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"2"}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/participants/sign_in" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 10.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:09 +0000
+
+
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/organisers.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/interests.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/events.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/pages.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/participants.css?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/events.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/interests.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/organisers.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/pages.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/participants.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-12-10 18:04:17 +0000
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM schema_migrations[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (135.1ms)[0m  DROP DATABASE IF EXISTS "social_calendar_test"
+  [1m[36m (264.7ms)[0m  [1mCREATE DATABASE "social_calendar_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (0.4ms)[0m  CREATE EXTENSION IF NOT EXISTS "plpgsql"
+  [1m[36m (3.8ms)[0m  [1mCREATE TABLE "attendees" ("id" serial primary key, "event_id" integer, "participant_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "events" ("id" serial primary key, "title" character varying(255), "description" text, "url" character varying(255), "image_url" character varying(255), "created_at" timestamp, "updated_at" timestamp, "organiser_id" integer) 
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "interests" ("id" serial primary key, "tag" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (2.2ms)[0m  CREATE TABLE "likes" ("id" serial primary key, "participant_id" integer, "interest_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "organisers" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (3.2ms)[0m  CREATE TABLE "participants" ("id" serial primary key, "name" character varying(255), "created_at" timestamp, "updated_at" timestamp, "email" character varying(255) DEFAULT '' NOT NULL, "encrypted_password" character varying(255) DEFAULT '' NOT NULL, "reset_password_token" character varying(255), "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "sign_in_count" integer DEFAULT 0 NOT NULL, "current_sign_in_at" timestamp, "last_sign_in_at" timestamp, "current_sign_in_ip" character varying(255), "last_sign_in_ip" character varying(255)) 
+  [1m[36m (1.1ms)[0m  [1mCREATE UNIQUE INDEX "index_participants_on_email" ON "participants" USING btree ("email")[0m
+  [1m[35m (1.0ms)[0m  CREATE UNIQUE INDEX "index_participants_on_reset_password_token" ON "participants" USING btree ("reset_password_token")
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying(255) NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131209160219')
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207145046')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207145813')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207145827')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207145909')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207170530')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20131207170829')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20131207172210')[0m

@@ -17,6 +17,7 @@ class ParticipantsController < ApplicationController
   def show
     @participant = current_participant 
     # @participant = Participant.find(params[:id])
+    @events = Event.all
   end
 
   def profile

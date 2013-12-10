@@ -152,3 +152,166 @@
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
   [1m[35m (0.2ms)[0m  BEGIN
   [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:01:14 +0000
+Processing by Devise::RegistrationsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "participants" does not exist
+LINE 5:                WHERE a.attrelid = '"participants"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"participants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 29ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:01:46 +0000
+Processing by Devise::RegistrationsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "participants" does not exist
+LINE 5:                WHERE a.attrelid = '"participants"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"participants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 21ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:03:53 +0000
+Processing by Devise::RegistrationsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "participants" does not exist
+LINE 5:                WHERE a.attrelid = '"participants"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"participants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 21ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:09:20 +0000
+Processing by Devise::RegistrationsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "participants" does not exist
+LINE 5:                WHERE a.attrelid = '"participants"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"participants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 21ms
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:12:22 +0000
+Processing by Devise::RegistrationsController#new as HTML
+PG::UndefinedTable: ERROR:  relation "participants" does not exist
+LINE 5:                WHERE a.attrelid = '"participants"'::regclass
+                                          ^
+:               SELECT a.attname, format_type(a.atttypid, a.atttypmod),
+                     pg_get_expr(d.adbin, d.adrelid), a.attnotnull, a.atttypid, a.atttypmod
+                FROM pg_attribute a LEFT JOIN pg_attrdef d
+                  ON a.attrelid = d.adrelid AND a.attnum = d.adnum
+               WHERE a.attrelid = '"participants"'::regclass
+                 AND a.attnum > 0 AND NOT a.attisdropped
+               ORDER BY a.attnum
+
+Completed 500 Internal Server Error in 27ms
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:19:55 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.2ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 227ms (Views: 201.5ms | ActiveRecord: 4.0ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:21:54 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (90.8ms)
+Completed 200 OK in 131ms (Views: 104.7ms | ActiveRecord: 4.9ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:22:28 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (86.8ms)
+Completed 200 OK in 126ms (Views: 100.7ms | ActiveRecord: 3.9ms)
+  [1m[35m (0.3ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+Started GET "/participants/sign_up" for 127.0.0.1 at 2013-12-10 18:22:49 +0000
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.9ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (89.2ms)
+Completed 200 OK in 128ms (Views: 102.8ms | ActiveRecord: 3.9ms)
+Started POST "/participants" for 127.0.0.1 at 2013-12-10 18:22:49 +0000
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "participant"=>{"name"=>"Charles", "email"=>"c@c.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35mParticipant Exists (2.8ms)[0m  SELECT 1 AS one FROM "participants" WHERE "participants"."email" = 'c@c.com' LIMIT 1
+  [1m[36mSQL (4.8ms)[0m  [1mINSERT INTO "participants" ("created_at", "email", "encrypted_password", "name", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", Tue, 10 Dec 2013 18:22:49 UTC +00:00], ["email", "c@c.com"], ["encrypted_password", "$2a$04$ez9WwSLmXW43z4xR9AfCmOWlfbyoBY12q3ozKbrXE.rdeK.bSHE2y"], ["name", "Charles"], ["updated_at", Tue, 10 Dec 2013 18:22:49 UTC +00:00]]
+  [1m[35mSQL (1.0ms)[0m  UPDATE "participants" SET "last_sign_in_at" = $1, "current_sign_in_at" = $2, "last_sign_in_ip" = $3, "current_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "participants"."id" = 1  [["last_sign_in_at", Tue, 10 Dec 2013 18:22:49 UTC +00:00], ["current_sign_in_at", Tue, 10 Dec 2013 18:22:49 UTC +00:00], ["last_sign_in_ip", "127.0.0.1"], ["current_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", Tue, 10 Dec 2013 18:22:49 UTC +00:00]]
+Redirected to http://www.example.com/
+Completed 302 Found in 82ms (ActiveRecord: 8.8ms)
+Started GET "/" for 127.0.0.1 at 2013-12-10 18:22:49 +0000
+Processing by ParticipantsController#index as HTML
+  [1m[36mParticipant Load (0.9ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 1 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mParticipant Load (0.4ms)[0m  SELECT "participants".* FROM "participants" WHERE "participants"."id" IS NULL LIMIT 1
+Redirected to http://www.example.com/participants/1
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+Started GET "/participants/1" for 127.0.0.1 at 2013-12-10 18:22:49 +0000
+Processing by ParticipantsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mParticipant Load (0.4ms)[0m  [1mSELECT "participants".* FROM "participants" WHERE "participants"."id" = 1 ORDER BY "participants"."id" ASC LIMIT 1[0m
+  [1m[35mEvent Load (0.9ms)[0m  SELECT "events".* FROM "events"
+  Rendered participants/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 12ms (Views: 3.9ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
