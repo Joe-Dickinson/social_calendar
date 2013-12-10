@@ -31,6 +31,11 @@ gem 'httparty'
 
 gem 'devise'
 
+gem 'pry'
+
+gem 'pry-byebug'
+
+
 group :test, :development do
   gem 'cucumber-rails', :require => false
   # database_cleaner is not required, but highly recommended

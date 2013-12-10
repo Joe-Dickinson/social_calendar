@@ -1,0 +1,11 @@
+edit.html.erb
+
+<%= form_for @participant, :url => participant_path(@participant) do |f| %>
+  <fieldset>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </fieldset>
+  <fieldset class="button">
+    <%= f.submit "Save" %>
+  </fieldset>
+  <% end %>
