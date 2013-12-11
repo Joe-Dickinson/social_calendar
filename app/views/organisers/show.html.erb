@@ -1,1 +1,13 @@
-show.html.erb
+
+Welcome <%= @organiser.name %> ||
+
+<%= link_to "Sign Out #{@organiser.email}", destroy_organiser_session_path %>
+
+<%= link_to "Visit Profile", organiser_profile_path(@organiser) %>
+
+<!-- link_to "Create a new event" -->
+
+<br> <!--<<<-->
+<br> <!--<<<-->
+
+Events You're Hosting

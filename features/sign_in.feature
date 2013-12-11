@@ -1,5 +1,4 @@
 Feature: Sign in
-    @wip
   Scenario: A participant signs in 
     Given that a participant is on the sign in page
     And that he is already registered
@@ -9,6 +8,7 @@ Feature: Sign in
     Then he should be successfully signed in
     And he should see his event feed
 
+    @wip
   Scenario: An event organiser signs in
     Given that an organiser is on the sign in page
     And that she is already registered

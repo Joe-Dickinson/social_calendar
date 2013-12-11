@@ -22,3 +22,28 @@ end
 Then(/^he should see his event feed$/) do
   expect(page).to have_content("Nine Worlds")
 end
+
+Given(/^that an organiser is on the sign in page$/) do
+  visit new_organiser_session_url
+end
+
+Given(/^that she is already registered$/) do
+  @organiser = Organiser.make!
+end
+
+Given(/^she enters valid data$/) do
+  fill_in "Email", :with => "e@e.com"
+  fill_in "Password", :with => "password"
+end
+
+Given(/^she clicks the "(.*?)" button$/) do |button|
+  click_button button
+end
+
+Then(/^she should be successfully signed in$/) do
+  expect(page).to have_content("Welcome Emily")
+end
+
+Then(/^she should see her event feed$/) do
+  expect(page).to have_content("Nine Worlds")
+end

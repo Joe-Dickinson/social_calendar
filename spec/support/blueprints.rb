@@ -14,6 +14,12 @@ Participant.blueprint do
   password { "password" }
 end
 
+Organiser.blueprint do
+  name { "Emily" }
+  email { "e@e.com"}
+  password { "password" }
+end
+
 Event.blueprint do
   title { "Nine Worlds Geek Fest 2014"}
   url { "https://nineworlds.co.uk/" }
