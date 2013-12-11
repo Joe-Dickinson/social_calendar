@@ -6,13 +6,14 @@ class EventsController < ApplicationController
   end
 
   def create
-    @event = Event.new(event_params) 
+    @event = Event.new(event_params)
+    @event.organiser = current_organiser
     @event.save!
     redirect_to organiser_path(current_organiser)
   end
 
   def index
-    
+
   end
 
   private
