@@ -30,6 +30,7 @@ gem 'devise'
 gem 'pry'
 gem 'pry-byebug'
 gem 'launchy'
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 
 group :test, :development do
   gem 'cucumber-rails', :require => false

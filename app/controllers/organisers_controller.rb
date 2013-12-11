@@ -5,4 +5,8 @@ class OrganisersController < ApplicationController
   def index
     @organiser = current_organiser
   end
+
+  def show
+    @organiser = current_organiser
+  end
 end

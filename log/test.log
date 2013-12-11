@@ -704,3 +704,28 @@ Processing by ParticipantsController#show as HTML
   Rendered participants/show.html.erb within layouts/application (2.1ms)
 Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.9ms)
   [1m[36m (0.4ms)[0m  [1mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDeviseToOrganisers (20131211141156)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (9.7ms)[0m  [1mALTER TABLE "organisers" ADD COLUMN "email" character varying(255) DEFAULT '' NOT NULL[0m
+  [1m[35m (3.1ms)[0m  ALTER TABLE "organisers" ADD COLUMN "encrypted_password" character varying(255) DEFAULT '' NOT NULL
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "organisers" ADD COLUMN "reset_password_token" character varying(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "organisers" ADD COLUMN "reset_password_sent_at" timestamp
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "organisers" ADD COLUMN "remember_created_at" timestamp[0m
+  [1m[35m (2.4ms)[0m  ALTER TABLE "organisers" ADD COLUMN "sign_in_count" integer DEFAULT 0 NOT NULL
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "organisers" ADD COLUMN "current_sign_in_at" timestamp[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "organisers" ADD COLUMN "last_sign_in_at" timestamp
+  [1m[36m (0.3ms)[0m  [1mALTER TABLE "organisers" ADD COLUMN "current_sign_in_ip" character varying(255)[0m
+  [1m[35m (0.3ms)[0m  ALTER TABLE "organisers" ADD COLUMN "last_sign_in_ip" character varying(255)
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_organisers_on_email" ON "organisers" ("email")[0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX "index_organisers_on_reset_password_token" ON "organisers" ("reset_password_token")
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131211141156"]]
+  [1m[35m (2.1ms)[0m  COMMIT
+Migrating to AddSessionsTable (20131211154912)
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35m (3.6ms)[0m  CREATE TABLE "sessions" ("id" serial primary key, "session_id" character varying(255) NOT NULL, "data" text, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (0.9ms)[0m  [1mCREATE UNIQUE INDEX "index_sessions_on_session_id" ON "sessions" ("session_id")[0m
+  [1m[35m (1.1ms)[0m  CREATE INDEX "index_sessions_on_updated_at" ON "sessions" ("updated_at")
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES ($1)[0m  [["version", "20131211154912"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m

@@ -16,3 +16,11 @@
 
   <%= link_to "Register", new_organiser_registration_path %>
 </div>
+
+<% if participant_signed_in? %>
+  <% redirect_to participants_path(current_participant) %>
+<% end %>
+
+<% if organiser_signed_in? %> 
+  <% redirect_to organiser_path(current_organiser) %>
+<% end %>
