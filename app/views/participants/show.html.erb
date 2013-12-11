@@ -3,7 +3,7 @@ Welcome <%= @participant.name %> ||
 
 <%= link_to "Sign Out #{@participant.email}", destroy_participant_session_path %>
 
-<%= link_to "Visit Profile", participant_profile_path %>
+<%= link_to "Visit Profile", participant_profile_path(@participant) %>
 
 <br> <!--<<<-->
 <br> <!--<<<-->

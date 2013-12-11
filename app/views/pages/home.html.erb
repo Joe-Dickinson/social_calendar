@@ -1,5 +1,18 @@
-<%= link_to "Sign in", new_participant_session_url %>
+<div>
+  
+  <h2> <%= link_to "Participants", participants_path %> </h2>
 
-<%= link_to "Register", new_participant_registration_path %>
+  <%= link_to "Sign In", new_participant_session_url %>
 
-<%= link_to "participants", participants_path %>
+  <%= link_to "Register", new_participant_registration_path %>
+</div>
+
+
+<div>
+  
+  <h2> Organisers </h2>
+
+  <%= link_to "Sign in", new_organiser_session_url %>
+
+  <%= link_to "Register", new_organiser_registration_path %>
+</div>
