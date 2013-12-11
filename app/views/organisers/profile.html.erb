@@ -1,0 +1,8 @@
+<%= @organiser.name %>'s profile
+
+<% if @organiser == current_organiser %>
+  <%= link_to "Edit Profile", edit_organiser_path %>
+<% end %>
+
+<%= link_to "Events You're Hosting", organiser_path(current_organiser) %>
+

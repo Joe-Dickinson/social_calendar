@@ -7,6 +7,11 @@ class OrganisersController < ApplicationController
   end
 
   def show
+    @events = Event.all
     @organiser = current_organiser
+  end
+
+  def profile 
+    @organiser = Organiser.find(params[:id])
   end
 end

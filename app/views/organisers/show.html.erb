@@ -5,9 +5,20 @@ Welcome <%= @organiser.name %> ||
 
 <%= link_to "Visit Profile", organiser_profile_path(@organiser) %>
 
-<!-- link_to "Create a new event" -->
+<%= link_to "Create New Event", new_organiser_event_path(@organiser) %>
+
+<br>
+
+<div> Create New Event </div>
 
 <br> <!--<<<-->
 <br> <!--<<<-->
 
 Events You're Hosting
+
+<% @events.each do |e| %>
+  <h2> <%= e.title %> </h2>
+  <h3> <%= e.url %> </h3>
+  <div> <%= truncate(e.description, :length => 200) %> </div>
+  <div> Hosted by: asldfhasljhd </div>
+<% end %>
