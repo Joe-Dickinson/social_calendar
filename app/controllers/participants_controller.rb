@@ -18,6 +18,7 @@ class ParticipantsController < ApplicationController
     @participant = current_participant 
     # @participant = Participant.find(params[:id])
     @events = Event.all
+    @events = @events.reverse
   end
 
   def profile

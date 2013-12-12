@@ -1,7 +1,7 @@
 
 Welcome <%= @participant.name %> ||
 
-<%= link_to "Sign Out #{@participant.email}", destroy_participant_session_path %>
+<%= link_to "Sign Out #{@participant.email}", destroy_participant_session_path(@participant) %>
 
 <%= link_to "Visit Profile", participant_profile_path(@participant) %>
 
@@ -10,9 +10,10 @@ Welcome <%= @participant.name %> ||
 
 Your Events || Recommended Events || All Events
 
-<% @events.reverse_each do |e| %>
+<% @events.each do |e| %>
   <h2> <%= e.title %> </h2>
   <h3> <%= e.url %> </h3>
   <div> <%= truncate(e.description, :length => 200) %> </div>
-   <h3> Hosted by: <%=link_to "#{e.organiser.name}", organiser_profile_path(e.organiser) %> </h3>
+  <h3> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h3>
+   Going || Maybe || Ignore
 <% end %>

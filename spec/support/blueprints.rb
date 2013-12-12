@@ -23,6 +23,6 @@ end
 Event.blueprint do
   title { "Nine Worlds Geek Fest 2014"}
   url { "https://nineworlds.co.uk/" }
-  description { "Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."}
-  organiser_id { 9 }
+  description { Faker::Lorem.words(50).join(" ")}
+  organiser
 end

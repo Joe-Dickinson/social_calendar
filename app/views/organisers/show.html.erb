@@ -1,7 +1,7 @@
 
 Welcome <%= @organiser.name %> ||
 
-<%= link_to "Sign Out #{@organiser.email}", destroy_organiser_session_path %>
+<%= link_to "Sign Out #{@organiser.email}", destroy_organiser_session_url %>
 
 <%= link_to "Visit Profile", organiser_profile_path(@organiser) %>
 
@@ -13,22 +13,22 @@ Welcome <%= @organiser.name %> ||
 
 ===Events You're Hosting===
 
-<% @events.reverse_each do |e| %>
+<% @events.each do |e| %>
   <% if e.organiser == current_organiser %>
     <h2> <%= e.title %> </h2>
     <h3> <%= e.url %> </h3>
-    <div> <%= truncate(e.description, :length => 200) %> </div>
-    <h3> Hosted by: <%=link_to "#{e.organiser.name}", organiser_profile_path(e.organiser) %> </h3>
+    <div> <%= truncate(e.description, :length => 200) %> (Continue) </div>
+    <h3> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h3>
   <% end %>
 <% end %>
 
 <br>
 ===All Other Events===
-<% @events.reverse_each do |e| %>
+<% @events.each do |e| %>
   <% if e.organiser != current_organiser %>
     <h2> <%= e.title %> </h2>
     <h3> <%= e.url %> </h3>
-    <div> <%= truncate(e.description, :length => 200) %> </div>
-    <h3> Hosted by: <%=link_to "#{e.organiser.name}", organiser_profile_path(e.organiser) %> </h3>
+    <div> <%= truncate(e.description, :length => 200) %> (Continue) </div>
+    <h3> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h3>
   <% end %>
 <% end %>

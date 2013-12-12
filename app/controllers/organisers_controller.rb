@@ -8,6 +8,7 @@ class OrganisersController < ApplicationController
 
   def show
     @events = Event.all
+    @events = @events.reverse
     @organiser = current_organiser
   end
 

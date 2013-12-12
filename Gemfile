@@ -31,6 +31,7 @@ gem 'pry'
 gem 'pry-byebug'
 gem 'launchy'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
+gem 'faker'
 
 group :test, :development do
   gem 'cucumber-rails', :require => false
