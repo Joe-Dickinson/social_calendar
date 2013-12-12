@@ -17,3 +17,8 @@
   padding-left: 150px;
   padding-right: 150px;
 }
+
+.float-left {
+  float: left;
+  margin-right: 20px;
+}

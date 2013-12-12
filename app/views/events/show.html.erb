@@ -7,6 +7,14 @@
 <%= @event.description %>
 
 <% if @event.organiser == current_organiser %>
-  <%= link_to "Delete This Event", organiser_event_path(@event.organiser, @event), :method => :delete, :class => :destroy %>
-  <%= link_to "Edit This Event", edit_organiser_event_path(@event.organiser, @event) %>
+  <div>
+    <%= link_to "Edit This Event", edit_organiser_event_path(@event.organiser, @event) %>
+  </div>
+   <div>
+    <%= link_to "Delete This Event", organiser_event_path(@event.organiser, @event), :method => :delete, :class => :destroy %>
+  </div>
 <% end %>
+
+<div>
+<%= link_to "Events Feed", organiser_path(current_organiser) %>
+</div>
