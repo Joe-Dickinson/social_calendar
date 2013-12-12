@@ -32,6 +32,9 @@ gem 'pry-byebug'
 gem 'launchy'
 gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
 gem 'faker'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
 
 group :test, :development do
   gem 'cucumber-rails', :require => false

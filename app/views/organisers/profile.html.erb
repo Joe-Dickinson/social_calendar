@@ -1,8 +1,17 @@
-<%= @organiser.name %>'s profile
+<div> 
+  <% if @organiser.name[-1,1] != "s" %>
+    <%= @organiser.name %>'s profile
+  <% else %>
+    <%= @organiser.name %>' profile
+  <% end %>
+</div>
 
+<div> 
 <% if @organiser == current_organiser %>
   <%= link_to "Edit Profile", edit_organiser_path %>
 <% end %>
+</div>
 
-<%= link_to "Events You're Hosting", organiser_path(current_organiser) %>
-
+<div>
+  <%= link_to "Events You're Hosting", organiser_path(current_organiser) %>
+</div>

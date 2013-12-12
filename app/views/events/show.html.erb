@@ -1,2 +1,12 @@
 <h2> <%= @event.title %> </h2>
+
+<h3> <%= link_to @event.url, "http://#{@event.url}" %>
+
 <h3> Hosted By: <%= link_to @event.organiser.name, organiser_profile_path(@event.organiser) %> </h3> 
+
+<%= @event.description %>
+
+<% if @event.organiser == current_organiser %>
+  <%= link_to "Delete This Event", organiser_event_path(@event.organiser, @event), :method => :delete, :class => :destroy %>
+  <%= link_to "Edit This Event", edit_organiser_event_path(@event.organiser, @event) %>
+<% end %>

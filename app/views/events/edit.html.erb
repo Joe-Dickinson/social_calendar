@@ -1,0 +1,17 @@
+<%= form_for @event, :url => organiser_event_path(@event.organiser, @event) do |f| %>
+  <fieldset>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :url %>
+    <%= f.text_field :url %>
+  </fieldset>
+  <fieldset>
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+  </fieldset>
+  <fieldset class="button">
+    <%= f.submit "Save" %>
+  </fieldset>
+  <% end %>
