@@ -11,9 +11,10 @@ Welcome <%= @participant.name %> ||
 Your Events || Recommended Events || All Events
 
 <% @events.each do |e| %>
-  <h2> <%= e.title %> </h2>
-  <h3> <%= e.url %> </h3>
-  <div> <%= truncate(e.description, :length => 200) %> </div>
+  <h2> <%= link_to e.title, organiser_event_path(e.organiser, e) %> </h2>
+  <h3> <%= link_to e.url, "http://#{e.url}" %> </h3>
+  <div> <%= truncate(e.description, :length => 200) %>
+  <%= link_to "(Continue)", organiser_event_path(e.organiser, e) %> </div>
   <h3> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h3>
    Going || Maybe || Ignore
 <% end %>

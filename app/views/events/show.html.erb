@@ -1,0 +1,2 @@
+<h2> <%= @event.title %> </h2>
+<h3> Hosted By: <%= link_to @event.organiser.name, organiser_profile_path(@event.organiser) %> </h3> 

@@ -7,9 +7,9 @@ class ParticipantsController < ApplicationController
   end
 
   def index
-    @participant_1 = Participant.find_by_id(params[:id])
-    @participant = Participant.new
-    redirect_to :action => 'show', :id => current_participant
+    # @participant_1 = Participant.find_by_id(params[:id])
+    @participant = Participant.new # <<< Using this? 
+    redirect_to :action => 'show', :id => current_participant #<<< devise? 
   end
 
   #users should only ever see their own event feed. Event feed link should always be 
