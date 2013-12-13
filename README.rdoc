@@ -1,9 +1,12 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
+Pivotal Tracker: https://www.pivotaltracker.com/s/projects/971496
+
+Heroku: http://whispering-hamlet-5920.herokuapp.com/
+
+
+
 
 * Ruby version
 

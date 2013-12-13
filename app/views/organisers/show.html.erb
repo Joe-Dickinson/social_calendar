@@ -1,14 +1,8 @@
 
-Welcome <%= @organiser.name %> ||
+<div>
+  Welcome <%= @organiser.name %> 
+</div>
 
-<%= link_to "Sign Out #{@organiser.email} ||", destroy_organiser_session_url %>
-
-<%= link_to "Visit Profile ||", organiser_profile_path(@organiser) %>
-
-<%= link_to "Create New Event", new_organiser_event_path(@organiser) %>
-
-<br> <!--<<<-->
-<br> <!--<<<-->
 <br>
 
 ===Events You're Hosting===
@@ -32,7 +26,7 @@ Welcome <%= @organiser.name %> ||
     <div> <%= truncate(e.description, :length => 200) %> 
       <%= link_to "(Continue)", organiser_event_path(e.organiser, e) %> </div>
     <h4> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h4>
-    <div class="float-left"> <%= button_to "I'm Going", organiser_path, :method => :get, :class => "btn" %> </div>
-    <div> <%= button_to "Not Interested", organiser_path(current_organiser), :method => :get, :class => "btn" %> </div>
+    <div class="float-left"> <%= button_to "I'm Going", organiser_path, :method => :get, :class => "btn btn-success" %> </div>
+    <div> <%= button_to "Not Interested", organiser_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>
   <% end %>
 <% end %>

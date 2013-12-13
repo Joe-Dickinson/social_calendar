@@ -8,6 +8,26 @@
 </head>
 <body>
 
+<% if organiser_signed_in? %>
+<div class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+    <div class="span1"></div>
+    <%= link_to "Events Feed", organiser_path(current_organiser), :class => "brand" %>
+    <ul class="nav">
+      <li> <%= link_to "Your profile", organiser_profile_path(current_organiser) %> </li>
+      <li><%= link_to "Create New Event", new_organiser_event_path(current_organiser) %></li>
+      <li><%= link_to "Sign Out #{current_organiser.email}", destroy_organiser_session_path(current_organiser), :class => "offset6" %></li>
+    </ul>
+  </div>
+</div>
+<% end %>
+
+<div class="row">
+  <div class="span3">
+  </div>
+
+  <div class="span9">
+
   <% if flash[:notice] %>
     <flash class="notice">
       <%= flash[:noitce] %>
@@ -20,11 +40,13 @@
     <flash>
   <% end %>
 
-  <div class="edge-padding">
+  <div class="escape-navbar">
 
-<%= yield %>
-  
-  </div>
+  <%= yield %>
+
+  </div> <!--end of escape-navbar-->
+
+  </div> <!--end of span 9-->
 
 </body>
 </html>
