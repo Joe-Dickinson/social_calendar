@@ -10,14 +10,15 @@ SocialCalendar::Application.routes.draw do
   devise_for :organisers
   resources :participants
   resources :organisers do
-    # member do
-    #   :event
-    # end
+    member do
+      :happening
+    end
 
     resources :events
   end
   # resources :events
 
+  post "organisers/:organiser_id/happenings/:event_id", :to => "organisers#join", :as => "join_organiser_happening"
   get "participants/:id/profile", :to => "participants#profile", :as => "participant_profile"
   get "organisers/:id/profile", :to => "organisers#profile", :as => "organiser_profile"
   # patch "participants/:id/profile", :to => "participants#update"

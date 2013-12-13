@@ -14,6 +14,11 @@
     <div> <%= truncate(e.description, :length => 200) %> 
       <%= link_to "(Continue)", organiser_event_path(e.organiser, e) %> </div>
     <h4> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h4>
+    <div> <b> People going to this event: </b>
+      <% e.members.each do |m| %>
+        <%= m.name %>
+      <% end %>
+    </div>
   <% end %>
 <% end %>
 
@@ -26,7 +31,15 @@
     <div> <%= truncate(e.description, :length => 200) %> 
       <%= link_to "(Continue)", organiser_event_path(e.organiser, e) %> </div>
     <h4> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h4>
-    <div class="float-left"> <%= button_to "I'm Going", organiser_path, :method => :get, :class => "btn btn-success" %> </div>
+    <div class="float-left"> <%= button_to "I'm Going", join_organiser_happening_path(current_organiser, e), :class => "btn btn-success" %> </div> 
     <div> <%= button_to "Not Interested", organiser_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>
+   
+    <div> <b> People going to this event: </b>
+      <% e.members.each do |m| %>
+        <%= m.name %>
+      <% end %>
+    </div>
   <% end %>
 <% end %>
+
+<div class="end-padding"> </div>

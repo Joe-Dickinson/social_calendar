@@ -26,6 +26,18 @@ class OrganisersController < ApplicationController
     redirect_to organiser_profile_path(@organiser)
   end
 
+  def join
+    @organiser = Organiser.find(params[:organiser_id])
+    @event = Event.find(params[:event_id])
+    @event.members << @organiser
+    @event.save!
+    redirect_to organiser_path(@organiser)
+  end
+
+  def insert_into_event
+
+  end
+
   private
   def profile_params
     params.require(:organiser).permit(:name)

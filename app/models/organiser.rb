@@ -7,4 +7,7 @@ class Organiser < ActiveRecord::Base
   has_many :happenings, :class_name => "Event", :through => :guests
   has_many :guests
 
+  def insert_into_event(organiser, event)
+    event.members << organiser
+  end
 end
