@@ -18,6 +18,7 @@ SocialCalendar::Application.routes.draw do
   end
   # resources :events
 
+  post "organisers/:organiser_id/happenings/:event_id/cancel", :to => "organisers#cancel", :as => "cancel_organiser_happening"
   post "organisers/:organiser_id/happenings/:event_id", :to => "organisers#join", :as => "join_organiser_happening"
   get "participants/:id/profile", :to => "participants#profile", :as => "participant_profile"
   get "organisers/:id/profile", :to => "organisers#profile", :as => "organiser_profile"

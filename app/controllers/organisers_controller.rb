@@ -29,12 +29,16 @@ class OrganisersController < ApplicationController
   def join
     @organiser = Organiser.find(params[:organiser_id])
     @event = Event.find(params[:event_id])
-    if @event.members.include?(@organiser)
-      flash[:alert] = "You are already attending this event!"
-    else
-      @event.members << @organiser
-      @event.save!
-    end
+    @event.members << @organiser
+    @event.save!
+    redirect_to organiser_path(@organiser)
+  end
+
+  def cancel
+    @organiser = Organiser.find(params[:organiser_id])
+    @event = Event.find(params[:event_id])
+    @event.members.delete(@organiser)
+    @event.save!
     redirect_to organiser_path(@organiser)
   end
 
