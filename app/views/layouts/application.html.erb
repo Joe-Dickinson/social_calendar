@@ -28,19 +28,9 @@
 
   <div class="span9">
 
-  <% if flash[:notice] %>
-    <flash class="notice">
-      <%= flash[:noitce] %>
-    </flash>
-  <% end %>
-
-  <% if flash[:alert] %>
-    <flash class="alert">
-      <%= flash[:alert] %>
-    <flash>
-  <% end %>
-
   <div class="escape-navbar">
+
+  <%= bootstrap_flash %>
 
   <%= yield %>
 
