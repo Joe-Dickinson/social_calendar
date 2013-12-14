@@ -8,7 +8,7 @@ class OrganisersController < ApplicationController
 
   def show
     @events = Event.all
-    @events = @events.reverse
+    @events = @events.order(:created_at => :desc)
     @organiser = current_organiser
   end
 
@@ -29,21 +29,17 @@ class OrganisersController < ApplicationController
   def join
     @organiser = Organiser.find(params[:organiser_id])
     @event = Event.find(params[:event_id])
-    @event.members << @organiser
-    @event.save!
+    @organiser.add_to_event(@organiser, @event)
     redirect_to organiser_path(@organiser)
+    flash[:notice] = "You are attending #{@event.title}!"
   end
 
   def cancel
     @organiser = Organiser.find(params[:organiser_id])
     @event = Event.find(params[:event_id])
-    @event.members.delete(@organiser)
-    @event.save!
+    @organiser.remove_from_event(@organiser, @event)
     redirect_to organiser_path(@organiser)
-  end
-
-  def insert_into_event
-
+    flash[:notice] = "You are no longer attending #{@event.title}."
   end
 
   private

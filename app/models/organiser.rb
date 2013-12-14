@@ -6,4 +6,22 @@ class Organiser < ActiveRecord::Base
   has_many :events
   has_many :happenings, :class_name => "Event", :through => :guests
   has_many :guests
+
+  def apostrophe_position
+    if self.name[-1,1] != "s"
+      "#{self.name}'s"
+    else
+      "#{self.name}'"
+    end
+  end
+
+  def add_to_event(organiser, event)
+    event.members << organiser 
+    event.save!
+  end
+
+  def remove_from_event(organiser, event)
+    event.members.delete(organiser)
+    event.save!
+  end
 end

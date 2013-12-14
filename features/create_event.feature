@@ -6,7 +6,6 @@ Feature: Create Event
     When I click "Create New Event"
     Then I should see the new event page
 
-    @wip
   Scenario: An organiser creates a new event
     Given that I am signed in
     And that I am on the new event page

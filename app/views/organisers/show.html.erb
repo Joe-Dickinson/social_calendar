@@ -15,8 +15,9 @@
       <%= link_to "(Continue)", organiser_event_path(e.organiser, e) %> </div>
     <h4> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h4>
     <div> <b> People going to this event: </b>
+      <%= e.organiser.name %>
       <% e.members.each do |m| %>
-        <%= m.name %>
+        , <%= m.name %>
       <% end %>
     </div>
   <% end %>
@@ -41,8 +42,9 @@
     <div> <%= button_to "Not Interested", organiser_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>
    
     <div> <b> People going to this event: </b>
+      <%=e.organiser.name%>
       <% e.members.each do |m| %>
-        <%= m.name %>
+        <%=m.name%>
       <% end %>
     </div>
   <% end %>

@@ -1,9 +1,5 @@
-<div> 
-  <% if @organiser.name[-1,1] != "s" %>
-    <%= @organiser.name %>'s profile
-  <% else %>
-    <%= @organiser.name %>' profile
-  <% end %>
+<div>
+  <%= @organiser.apostrophe_position %> profile 
 </div>
 
 <div> 

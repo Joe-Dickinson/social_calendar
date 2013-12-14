@@ -7,16 +7,12 @@ class ParticipantsController < ApplicationController
   end
 
   def index
-    # @participant_1 = Participant.find_by_id(params[:id])
-    @participant = Participant.new # <<< Using this? 
-    redirect_to :action => 'show', :id => current_participant #<<< devise? 
+    @participant = Participant.new 
+    redirect_to :action => 'show', :id => current_participant 
   end
 
-  #users should only ever see their own event feed. Event feed link should always be 
-  #relevant to the currently logged in user
   def show
     @participant = current_participant 
-    # @participant = Participant.find(params[:id])
     @events = Event.all
     @events = @events.reverse
   end

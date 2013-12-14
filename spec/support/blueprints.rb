@@ -16,7 +16,7 @@ end
 
 Organiser.blueprint do
   name { "Emily" }
-  email { "e@e.com"}
+  email { Faker::Internet.email }
   password { "password" }
 end
 
@@ -24,5 +24,5 @@ Event.blueprint do
   title { "Nine Worlds Geek Fest 2014"}
   url { "https://nineworlds.co.uk/" }
   description { Faker::Lorem.words(50).join(" ")}
-  organiser
+  organiser 
 end

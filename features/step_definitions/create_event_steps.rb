@@ -1,7 +1,7 @@
 Given(/^that I am signed in$/) do
   @organiser = Organiser.make!
   visit new_organiser_session_path
-  fill_in "Email", :with => "e@e.com"
+  fill_in "Email", :with => @organiser.email
   fill_in "Password", :with => "password"
   click_button "Sign in"
 end

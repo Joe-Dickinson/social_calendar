@@ -16,7 +16,7 @@
     <ul class="nav">
       <li> <%= link_to "Your profile", organiser_profile_path(current_organiser) %> </li>
       <li><%= link_to "Create New Event", new_organiser_event_path(current_organiser) %></li>
-      <li><%= link_to "Sign Out #{current_organiser.email}", destroy_organiser_session_path(current_organiser), :class => "offset5" %></li>
+      <li><%= link_to "Sign Out #{current_organiser.name}", destroy_organiser_session_path(current_organiser), :class => "offset5" %></li>
     </ul>
   </div>
 </div>
