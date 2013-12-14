@@ -5,7 +5,9 @@
 
 <br>
 
+<% if @organiser.events.count != 0 %>
 ===Events You're Hosting===
+<% end %>
 
 <% @events.each do |e| %>
   <% if e.organiser == current_organiser %>
@@ -24,7 +26,12 @@
 <% end %>
 
 <br>
+<% if @organiser.events.count != 0 %>
 ===All Other Events===
+<% else %>
+===All Events===
+<% end %>
+
 <% @events.each do |e| %>
   <% if e.organiser != current_organiser %>
     <h2> <%= link_to e.title, organiser_event_path(e.organiser, e) %> </h2>
@@ -40,12 +47,12 @@
     <% end %>
 
     <div> <%= button_to "Not Interested", organiser_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>
-   
+  
     <div> <b> People going to this event: </b>
-      <%=e.organiser.name%>
-      <% e.members.each do |m| %>
-        <%=m.name%>
-      <% end %>
+      <%=link_to e.organiser.name.strip, organiser_profile_path(e.organiser)%>
+      <%e.members.each do |m|%>
+        <%=link_to ", #{m.name.strip}", organiser_profile_path(m)%>
+      <%end%>
     </div>
   <% end %>
 <% end %>

@@ -44,6 +44,6 @@ class OrganisersController < ApplicationController
 
   private
   def profile_params
-    params.require(:organiser).permit(:name)
+    params.require(:organiser).permit(:name, :bio)
   end
 end

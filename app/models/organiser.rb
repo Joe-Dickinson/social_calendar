@@ -18,10 +18,13 @@ class Organiser < ActiveRecord::Base
   def add_to_event(organiser, event)
     event.members << organiser 
     event.save!
+    event.add_member(organiser, event)
   end
 
   def remove_from_event(organiser, event)
     event.members.delete(organiser)
     event.save!
+    event.remove_member(organiser, event)
   end
+
 end

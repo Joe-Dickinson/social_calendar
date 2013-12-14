@@ -1,5 +1,9 @@
-<div>
+<h3>
   <%= @organiser.apostrophe_position %> profile 
+</h3>
+
+<div>
+  <%= @organiser.bio %>
 </div>
 
 <div> 
@@ -10,4 +14,23 @@
 
 <div>
   <%= link_to "Back", organiser_path(current_organiser) %>
+</div>
+
+<div> 
+  <% if @organiser.events.count != 0 %>
+  ===Events <%= @organiser.name %> is hosting===
+  <br>
+  <% @organiser.events.each do |e| %>
+  <%= link_to e.title %>
+  <% end %>
+  <% end %>
+</div>
+
+<div> 
+  ===Events <%= @organiser.name %> is going to===
+  <br>
+  <% @organiser.happenings.each do |h| %>
+    <%= link_to h.title, organiser_event_path(h.organiser, h) %>
+  <br>
+  <% end %>
 </div>
