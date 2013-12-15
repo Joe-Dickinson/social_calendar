@@ -6,6 +6,8 @@ class Organiser < ActiveRecord::Base
   has_many :events
   has_many :happenings, :class_name => "Event", :through => :guests
   has_many :guests
+  has_many :interests, :through => :likes
+  has_many :likes
 
   def apostrophe_position
     if self.name[-1,1] != "s"

@@ -1,4 +1,4 @@
 class Like < ActiveRecord::Base
+  belongs_to :organiser
   belongs_to :interest
-  belongs_to :participant
 end
