@@ -23,10 +23,12 @@
 <% end %>
 
 <div class="row">
-  <div class="span3">
-  </div>
 
-  <div class="span9">
+  <% unless request.original_url.include?("profile") %>
+  <!--This is used for accessing the sidebar on the profile page 
+  without setting the span / offset on every single page individually-->
+    <div class="offset3 span9">
+  <% end %>
 
   <div class="escape-navbar">
 
@@ -38,8 +40,7 @@
 
   </div> <!--end of span 9-->
 
-  <div class="row"> 
-    <div class="span12"></div>
-  </div>
+  </div> <!--end of row-->
+
 </body>
 </html>

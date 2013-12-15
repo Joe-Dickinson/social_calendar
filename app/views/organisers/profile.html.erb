@@ -1,18 +1,4 @@
-<h2>
-  <%= @organiser.apostrophe_position %> profile 
-</h2>
-
-<div> 
-<% if @organiser == current_organiser %>
-  <%= link_to "Edit Profile", edit_organiser_path %>
-<% end %>
-</div>
-
-<div>
-  <%= @organiser.bio %>
-</div>
-
-<div class="sidebar span4">
+<div class="sidebar offset1 span3">
   <% if @organiser = current_organiser %>
     <h4> Add A New Interest </h4>
     <%= render "new" %>
@@ -24,10 +10,26 @@
   </h3>
   <% @organiser.interests.each do |i| %>
     <%= "-" + i.tag %>
+    <%= link_to "Remove", remove_interest_path(@organiser, i) %>
     <br>
   <% end %>
 
 </div> <!--end of sidebar-->
+
+<div class="span8 main_content">
+  <h2>
+    <%= @organiser.apostrophe_position %> profile 
+  </h2>
+
+  <div> 
+  <% if @organiser == current_organiser %>
+    <%= link_to "Edit Profile", edit_organiser_path %>
+  <% end %>
+  </div>
+
+  <div>
+    <%= @organiser.bio %>
+  </div>
 
 <div>
   <%= link_to "Back", organiser_path(current_organiser) %>
@@ -51,3 +53,5 @@
   <br>
   <% end %>
 </div>
+
+</div> <!--end of main_content-->

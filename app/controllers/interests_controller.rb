@@ -14,6 +14,14 @@ class InterestsController < ApplicationController
     redirect_to organiser_profile_path(@organiser)
   end
 
+  def remove
+    @organiser = current_organiser
+    @event = current_organiser.interests.find(params[:id])
+    @event.destroy!
+    @organiser.save!
+    redirect_to organiser_profile_path(@organiser)
+  end
+
   private
   def interest_params
     params.require(:interest).permit(:tag)

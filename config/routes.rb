@@ -15,13 +15,14 @@ SocialCalendar::Application.routes.draw do
     end
 
     collection do
-      resources :interests, :only => [:new, :edit, :index, :create]
+      resources :interests, :only => [:new, :edit, :index, :create, :remove]
     end
 
     resources :events
   end
   # resources :events
 
+  get "organiser/:organiser_id/interest/:id/remove", :to => "interests#remove", :as => "remove_interest"
   post "organisers/:organiser_id/happenings/:event_id/cancel", :to => "organisers#cancel", :as => "cancel_organiser_happening"
   post "organisers/:organiser_id/happenings/:event_id", :to => "organisers#join", :as => "join_organiser_happening"
   #get "participants/:id/profile", :to => "participants#profile", :as => "participant_profile"
