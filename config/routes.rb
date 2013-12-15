@@ -6,12 +6,16 @@ SocialCalendar::Application.routes.draw do
     #, :to => redirect('/participants/sign_in')
   # end
   
-  devise_for :participants #, :controllers => { :registrations => "registrations"}
+  #devise_for :participants #, :controllers => { :registrations => "registrations"}
   devise_for :organisers
-  resources :participants
+  #resources :participants
   resources :organisers do
     member do
       :happening
+    end
+
+    collection do
+      resources :interests, :only => [:new, :edit, :index, :create]
     end
 
     resources :events
@@ -20,7 +24,7 @@ SocialCalendar::Application.routes.draw do
 
   post "organisers/:organiser_id/happenings/:event_id/cancel", :to => "organisers#cancel", :as => "cancel_organiser_happening"
   post "organisers/:organiser_id/happenings/:event_id", :to => "organisers#join", :as => "join_organiser_happening"
-  get "participants/:id/profile", :to => "participants#profile", :as => "participant_profile"
+  #get "participants/:id/profile", :to => "participants#profile", :as => "participant_profile"
   get "organisers/:id/profile", :to => "organisers#profile", :as => "organiser_profile"
   # patch "participants/:id/profile", :to => "participants#update"
 

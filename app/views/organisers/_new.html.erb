@@ -1,0 +1,10 @@
+
+<%= form_for @interest, :url => interests_path do |f| %>
+  <fieldset>
+    <%= f.label :tag %>
+    <%= f.text_field :tag %>
+  </fieldset>
+  <fieldset class="button">
+    <%= f.submit "Add" %>
+  </fieldset>
+<% end %>
