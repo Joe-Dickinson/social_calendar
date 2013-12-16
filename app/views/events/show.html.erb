@@ -1,10 +1,12 @@
 <h2> <%= @event.title %> </h2>
 
-<h3> <%= link_to @event.url, "http://#{@event.url}" %>
+<h3> <%= link_to @event.url, "http://#{@event.url}" %> </h3>
 
-<h3> Hosted By: <%= link_to @event.organiser.name, organiser_profile_path(@event.organiser) %> </h3> 
+<h3> Hosted By: <%= link_to @event.organiser.name, organiser_profile_path(@event.organiser) %> </h3>
 
-<%= @event.description %>
+<div> <b> Starts: </b> <%= @event.start_date %> </h4> </div>
+<br>
+<div> <%= @event.description %> </div>
 
 <% if @event.organiser == current_organiser %>
   <div>
@@ -16,5 +18,5 @@
 <% end %>
 
 <div>
-<%= link_to "Back to Events", organiser_path(current_organiser) %>
+  <%= link_to "Back to Events", organiser_path(current_organiser) %>
 </div>
