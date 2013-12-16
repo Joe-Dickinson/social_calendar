@@ -19,6 +19,9 @@
     <h3> All interests </h3> 
     <% @interests.each do |i| %>
       <%= "-" + i.tag + " (#{i.id.to_s})" %>
+       <br>
+      <%= "Fans: " + i.organisers.count.to_s %> <!--more bug fixing-->
+      <br>
       <br>
     <% end %>
     <div class="end-padding"> </div>

@@ -29,9 +29,16 @@ class InterestsController < ApplicationController
 
   def remove
     @organiser = current_organiser
-    @event = current_organiser.interests.find(params[:id])
-    @event.destroy!
-    @organiser.save!
+    @interest = current_organiser.interests.find(params[:id])
+    if @interest.organisers.count <= 1
+      @interest.destroy!
+      @organiser.save!
+      flash[:success] = "No more fans. Interest deleted."
+    else
+      @like = @organiser.likes.find_by_interest_id(params[:id])
+      @like.destroy!
+      flash[:success] = "Interest removed."
+    end
     redirect_to organiser_profile_path(@organiser)
   end
 
