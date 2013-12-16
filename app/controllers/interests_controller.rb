@@ -8,9 +8,22 @@ class InterestsController < ApplicationController
   def create
     @organiser = current_organiser
     @interest = Interest.new(interest_params)
-    @organiser.interests << @interest
-    @interest.save!
-    @organiser.save!
+    if @interest.organiser_has_interest(@organiser) == true
+      flash[:alert] = "You already have this interest!"
+    else
+      @interest = @interest.interest_exists
+      if @interest == nil
+        @interest = Interest.new(interest_params)
+        @organiser.interests << @interest
+        @interest.save!
+        @organiser.save!
+        flash[:success] = "New interest created."
+      else
+        @organiser.interests << @interest
+        @organiser.save!
+        flash[:success] = "Existing interest added."
+      end
+    end
     redirect_to organiser_profile_path(@organiser)
   end
 

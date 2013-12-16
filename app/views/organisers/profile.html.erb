@@ -9,7 +9,7 @@
       <%= @organiser.apostrophe_position %> interests
     </h3>
     <% @organiser.interests.each do |i| %>
-      <%= "-" + i.tag %>
+      <%= "-" + i.tag + " (#{i.id.to_s})" %> <!--printing out ids for bug fixing-->
       <% if @organiser == current_organiser %>
         <%= link_to "Remove", remove_interest_path(@organiser, i) %>
       <% end %>
@@ -18,10 +18,10 @@
 
     <h3> All interests </h3> 
     <% @interests.each do |i| %>
-      <%= "-" + i.tag %>
+      <%= "-" + i.tag + " (#{i.id.to_s})" %>
       <br>
     <% end %>
-
+    <div class="end-padding"> </div>
   </div> <!--end of sidebar-->
 <% end %>
 
