@@ -23,8 +23,6 @@ class ApplicationController < ActionController::Base
   protected 
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << [:name]
-
-    devise_parameter_sanitizer.for(:organiser_events) << [:"start_date(1i)", :"start_date(2i)", :"start_date(3i)", :"start_date(4i)", :"start_date(5i)"]
   end
 
 end

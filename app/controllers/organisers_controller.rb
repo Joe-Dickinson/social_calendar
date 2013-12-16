@@ -10,6 +10,8 @@ class OrganisersController < ApplicationController
     @events = Event.all
     @events = @events.order(:created_at => :desc)
     @organiser = current_organiser
+    @recommended = @organiser.recommend_events(@organiser)
+    @recommended_events = @organiser.fill_events(@organiser)
   end
 
   def edit
