@@ -24,13 +24,13 @@
 
 <div class="row">
 
-  <% unless request.original_url.include?("profile") %>
-  <!--This is used for accessing the sidebar on the profile page 
-  without setting the span / offset on every single page individually-->
-    <div class="offset3 span9">
-  <% end %>
-
   <div class="escape-navbar">
+  
+  <div class="span4">
+    <%= yield :sidebar %>
+  </div>
+
+  <div class="span8">
 
   <%= bootstrap_flash %>
 

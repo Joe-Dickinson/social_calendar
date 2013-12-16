@@ -1,20 +1,29 @@
-<div class="sidebar offset1 span3">
-  <% if @organiser = current_organiser %>
-    <h4> Add A New Interest </h4>
-    <%= render "new" %>
-  <% end %>
+<% content_for :sidebar do %>
+  <div class="sidebar offset1 span3">
+    <% if @organiser == current_organiser %>
+      <h4> Add A New Interest </h4>
+      <%= render "new" %>
+    <% end %>
 
+    <h3>
+      <%= @organiser.apostrophe_position %> interests
+    </h3>
+    <% @organiser.interests.each do |i| %>
+      <%= "-" + i.tag %>
+      <% if @organiser == current_organiser %>
+        <%= link_to "Remove", remove_interest_path(@organiser, i) %>
+      <% end %>
+      <br>
+    <% end %>
 
-  <h3>
-    <%= @organiser.apostrophe_position %> interests
-  </h3>
-  <% @organiser.interests.each do |i| %>
-    <%= "-" + i.tag %>
-    <%= link_to "Remove", remove_interest_path(@organiser, i) %>
-    <br>
-  <% end %>
+    <h3> All interests </h3> 
+    <% @interests.each do |i| %>
+      <%= "-" + i.tag %>
+      <br>
+    <% end %>
 
-</div> <!--end of sidebar-->
+  </div> <!--end of sidebar-->
+<% end %>
 
 <div class="span8 main_content">
   <h2>
@@ -32,7 +41,7 @@
   </div>
 
 <div>
-  <%= link_to "Back", organiser_path(current_organiser) %>
+  <%= link_to "Back to Events", organiser_path(current_organiser) %>
 </div>
 
 <div> 

@@ -19,6 +19,7 @@ class OrganisersController < ApplicationController
   def profile 
     @organiser = Organiser.find(params[:id])
     @interest = Interest.new
+    @interests = Interest.all
   end
 
   def update
