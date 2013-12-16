@@ -1,35 +1,38 @@
 <% content_for :sidebar do %>
-  <div class="sidebar offset1 span3">
+  <div class="sidebar">
     <% if @organiser == current_organiser %>
       <h4> Add A New Interest </h4>
       <%= render "new" %>
     <% end %>
 
-    <h3>
+    <h4>
       <%= @organiser.apostrophe_position %> interests
-    </h3>
-    <% @organiser.interests.each do |i| %>
-      <%= "-" + i.tag + " (#{i.id.to_s})" %> <!--printing out ids for bug fixing-->
-      <% if @organiser == current_organiser %>
-        <%= link_to "Remove", remove_interest_path(@organiser, i) %>
-      <% end %>
-      <br>
-    <% end %>
+    </h4>
 
-    <h3> All interests </h3> 
-    <% @interests.each do |i| %>
-      <%= "-" + i.tag + " (#{i.id.to_s})" %>
-       <br>
-      <%= "Fans: " + i.organisers.count.to_s %> <!--more bug fixing-->
+    <ul class="interests">
+      <% @organiser.interests.each do |i| %>
+        <li> <%= i.tag + " (#{i.id.to_s})" %> </li> <!--printing out ids for bug fixing-->
+        <% if @organiser == current_organiser %>
+          <%= link_to "Remove", remove_interest_path(@organiser, i) %>
+        <% end %>
       <br>
-      <br>
-    <% end %>
+      <% end %>
+    </ul>
+
+    <h4> All interests </h4> 
+    <ul>
+      <% @interests.each do |i| %>
+        <li> <%= i.tag + " (#{i.id.to_s})" %> </li>
+        <%= "Fans: " + i.organisers.count.to_s %> <!--more bug fixing-->
+        <br>
+      <% end %>
+    </ul>
     <div class="end-padding"> </div>
   </div> <!--end of sidebar-->
 <% end %>
 
-<div class="span8 main_content">
-  <h2>
+<div class="main_content">
+  <h2 class="profile_title">
     <%= @organiser.apostrophe_position %> profile 
   </h2>
 
@@ -39,31 +42,32 @@
   <% end %>
   </div>
 
-  <div>
+  <div class="bio">
     <%= @organiser.bio %>
   </div>
 
-<div>
-  <%= link_to "Back to Events", organiser_path(current_organiser) %>
-</div>
+  <div>
+    <%= link_to "Back to Events", organiser_path(current_organiser) %>
+  </div>
 
-<div> 
-  <% if @organiser.events.count != 0 %>
-  ===Events <%= @organiser.name %> is hosting===
-  <br>
-  <% @organiser.events.each do |e| %>
-  <%= link_to e.title %>
-  <% end %>
-  <% end %>
-</div>
+  <div class="events_hosting"> 
+    <% if @organiser.events.count != 0 %>
+      <h4 class="events_hosting_title"> Events <%= @organiser.name %> is hosting </h4>
+      <ul>
+        <% @organiser.events.each do |e| %>
+          <li> <%= link_to e.title, organiser_event_path(e.organiser, e) %> </li>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
 
-<div> 
-  ===Events <%= @organiser.name %> is going to===
-  <br>
-  <% @organiser.happenings.each do |h| %>
-    <%= link_to h.title, organiser_event_path(h.organiser, h) %>
-  <br>
-  <% end %>
-</div>
+  <div class="events_attending"> 
+    <h4 class="events_attending_title"> <%= @organiser.name %> is going to </h4>
+    <ul>
+      <% @organiser.happenings.each do |h| %>
+        <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
+      <% end %>
+    </ul>
+  </div>
 
 </div> <!--end of main_content-->

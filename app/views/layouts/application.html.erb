@@ -25,22 +25,26 @@
 <div class="row">
 
   <div class="escape-navbar">
+
+  <div class="span1"> </div>
   
-  <div class="span4">
+  <div class="span3">
+
     <%= yield :sidebar %>
+
   </div>
 
   <div class="span8">
 
-  <%= bootstrap_flash %>
+      <%= bootstrap_flash %>
 
-  <%= yield %>
+      <%= yield %>
 
-  </div> <!--end of escape-navbar-->
+    </div> <!--end of escape-navbar-->
 
-  </div> <!--end of span 9-->
+  </div> <!--end of span 8-->
 
-  </div> <!--end of row-->
+</div> <!--end of row-->
 
 </body>
 </html>

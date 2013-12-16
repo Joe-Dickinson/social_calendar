@@ -15,7 +15,6 @@ class InterestsController < ApplicationController
       if @interest == nil
         @interest = Interest.new(interest_params)
         @organiser.interests << @interest
-        @interest.save!
         @organiser.save!
         flash[:success] = "New interest created."
       else
@@ -32,8 +31,7 @@ class InterestsController < ApplicationController
     @interest = current_organiser.interests.find(params[:id])
     if @interest.organisers.count <= 1
       @interest.destroy!
-      @organiser.save!
-      flash[:success] = "No more fans. Interest deleted."
+      flash[:alert] = "No more fans. Interest deleted."
     else
       @like = @organiser.likes.find_by_interest_id(params[:id])
       @like.destroy!
