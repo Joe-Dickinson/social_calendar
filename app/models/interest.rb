@@ -1,6 +1,8 @@
 class Interest < ActiveRecord::Base
   has_many :organisers, :through => :likes
   has_many :likes
+  has_many :guests, :through => :organisers
+  has_many :events, :through => :guests, :source => :happening
 
   def interest_exists
     @interests = Interest.all 

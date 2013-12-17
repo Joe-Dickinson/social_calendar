@@ -4,6 +4,8 @@ class Event < ActiveRecord::Base
   has_many :attendees
   has_many :members, :class_name => "Organiser", :through => :guests
   has_many :guests
+  has_many :likes, :through => :members
+  has_many :interests, :through => :likes
 
   def add_member(organiser, event)
     organiser.happenings << event

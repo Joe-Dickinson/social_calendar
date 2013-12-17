@@ -37,7 +37,7 @@ class Organiser < ActiveRecord::Base
     @events = []
     @self_happenings = [] 
 
-    organiser.happenings.each do |h|
+    self.happenings.each do |h|
       @self_happenings << h.id
     end
 
@@ -49,7 +49,7 @@ class Organiser < ActiveRecord::Base
 
     @interests.each do |i| 
       i.organisers.each do |o| 
-        if o != organiser 
+        if o != self 
           @organisers << Organiser.find_by_id(o.id) 
         end
       end
@@ -63,7 +63,7 @@ class Organiser < ActiveRecord::Base
 
     @duplicate = false
     @events.each do |e|
-      organiser.happenings.each do |h|
+      self.happenings.each do |h|
         if h == e 
           @duplicate = true
           break
@@ -76,12 +76,30 @@ class Organiser < ActiveRecord::Base
         @recommendation = Recommendation.new
         @recommendation.event_id = e.id
         @recommendation.rank = 1
-        organiser.recommendations << @recommendation
+        self.recommendations << @recommendation
       end
     end
-    organiser.recommendations
+    self.recommendations
     @events
   end
+
+  def get_recommendations
+    recommended_events = []
+    interests.each do |i|
+      i.organisers.each do |o|
+        unless o == self
+          o.happenings.each do |h|
+            recommended_events << h
+          end
+        end
+      end
+    end
+    recommended_events
+  end
+
+  # has_many :popular_interests, -> {select("interests.*").joins(:likes).group(:interest_id).having("count(interest_id) > 1")}, :class_name => "Interest",
+  # :through => :likes, :source => :interest
+  
 
   def fill_events(organiser)
     events_output = []
