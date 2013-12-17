@@ -10,8 +10,6 @@ class OrganisersController < ApplicationController
     @events = Event.all
     @events = @events.order(:created_at => :desc)
     @organiser = current_organiser
-    @recommended = @organiser.recommend_events(@organiser)
-    @recommended_events = @organiser.fill_events(@organiser)
   end
 
   def edit
@@ -34,7 +32,11 @@ class OrganisersController < ApplicationController
     @organiser = Organiser.find(params[:organiser_id])
     @event = Event.find(params[:event_id])
     @organiser.add_to_event(@organiser, @event)
-    redirect_to organiser_path(@organiser)
+    if request.referer == recommended_url(@organiser)
+      redirect_to recommended_path(@organiser)
+    else
+      redirect_to organiser_path(@organiser)
+    end
     flash[:notice] = "You are attending #{@event.title}!"
   end
 
@@ -49,6 +51,11 @@ class OrganisersController < ApplicationController
   def similar
     @organiser = Organiser.find(params[:id])
     @similar = @organiser.organisers.likeminded(@organiser.happenings.first)
+  end
+
+  def recommended
+    @organiser = Organiser.find(params[:id])
+    @recommended = @organiser.recommended_events
   end
 
   private

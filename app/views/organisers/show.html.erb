@@ -5,12 +5,9 @@
 
 <h4> <%= link_to "Similar to you", similar_path(@organiser) %> </h4>
 
-<br>
+<h4> <%= link_to "Recommended Events", recommended_path(@organiser) %> </h4>
 
-<h2> Recommended Events </h2>
-<% @recommended_events.each do |r| %>
-  <%= r.title %>
-<% end %>
+<br>
 
 <% if @organiser.events.count != 0 %>
   <h2> Events You're Hosting </h2>

@@ -1,0 +1,38 @@
+<h2> Recommended for <%= @organiser.name %> </h2>
+
+<% @recommended.each do |e| %>
+  <% @already_going = false %>
+  <% @organiser.happenings.each do |h| %>
+    <% if e == h %>
+      <% @already_going = true %>
+      <% break %>
+    <% end %>
+  <% end %>
+ 
+  <% while @already_going == false %>
+    <h3> <%= link_to e.title, organiser_event_path(e.organiser, e) %> </h3>
+    <div> <b> Starts: </b> <%= e.start_date %> </div>
+    <h4> <%= link_to e.url, "http://#{e.url}" %> </h4>
+    <div> <%= truncate(e.description, :length => 200) %> 
+      <%= link_to "(Continue)", organiser_event_path(e.organiser, e) %> </div>
+
+    <h4> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h4>
+
+    <% if e.members.include?(current_organiser) %>
+        <div class="float-left"> <%= button_to "Cancel Attendance", cancel_organiser_happening_path(current_organiser, e), :class => "btn btn-success disabled" %> </div>
+      <% else %>
+
+       <div class="float-left"> <%= button_to "Attend", join_organiser_happening_path(current_organiser, e), :class => "btn btn-success" %> </div> 
+      <% end %>
+
+      <div> <%= button_to "Not Interested", recommended_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>
+
+    <div> <b> People going to this event: </b>
+      <%= e.organiser.name %>
+      <% e.members.each do |m| %>
+        , <%= m.name %>
+      <% end %>
+    </div>
+    <% @already_going = true %>
+  <% end %>
+<% end %>
