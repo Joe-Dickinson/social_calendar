@@ -1,11 +1,14 @@
+<ul class="nav nav-tabs">
+  <li class="active">
+    <%= link_to "Events Feed", organiser_path(@organiser)%>
+  </li>
+  <li><%= link_to "Similar to You", similar_path(@organiser) %></li>
+  <li><%= link_to "Recommended Events", recommended_path(@organiser) %></li>
+</ul>
 
 <div>
   Welcome <%= @organiser.name %> 
 </div>
-
-<h4> <%= link_to "Similar to you", similar_path(@organiser) %> </h4>
-
-<h4> <%= link_to "Recommended Events", recommended_path(@organiser) %> </h4>
 
 <br>
 

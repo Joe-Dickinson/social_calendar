@@ -1,4 +1,13 @@
-<h2> Similar to <%= @organiser.name %> </h2>
+<ul class="nav nav-tabs">
+    <li><%= link_to "Events Feed", organiser_path(@organiser) %> </li>
+  <li class="active">
+    <%= link_to "Similar to You", similar_path(@organiser) %>
+  </li>
+  <li><%= link_to "Recommended Events", recommended_path(@organiser) %></li>
+</ul>
+
+
+<h3> Similar to <%= @organiser.name %> </h3>
  
 <% @similar.each do |o| %>
   <% if o != @organiser %>
