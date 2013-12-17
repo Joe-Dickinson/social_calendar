@@ -46,6 +46,11 @@ class OrganisersController < ApplicationController
     flash[:notice] = "You are no longer attending #{@event.title}."
   end
 
+  def similar
+    @organiser = Organiser.find(params[:id])
+    @similar = @organiser.organisers.likeminded(@organiser.happenings.first)
+  end
+
   private
   def profile_params
     params.require(:organiser).permit(:name, :bio)

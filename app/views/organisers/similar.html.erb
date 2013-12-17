@@ -1,0 +1,29 @@
+<h2> Similar to <%= @organiser.name %> </h2>
+
+
+<% @similar.each do |o| %>
+  <% if o != @organiser %>
+    <h4> <%= link_to o.name, organiser_profile_path(o) %> </h4>
+    likes: 
+    <br>
+    <% o.interests.each do |i| %>
+      <%=i.tag%>
+    <% end %>
+
+    <% unless o.events.blank? %>
+      <div> <b> Hosting: </b> </div>
+      <ul>
+      <% o.events.each do |e| %>
+        <li> <%= link_to e.title, organiser_event_path(o, e) %> </li>
+      <% end %>
+      </ul>
+    <% end %>
+
+    <div> <b> Going to: </b> </div>
+    <ul>
+      <% o.happenings.each do |h| %>
+        <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
+      <% end %>
+    </ul>
+  <% end %>
+<% end %>

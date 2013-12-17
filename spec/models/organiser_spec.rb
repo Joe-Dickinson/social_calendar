@@ -9,19 +9,27 @@ describe Organiser do
   describe "Recommended events" do
     before do
       @event = Event.make!
+      @event_nye = Event.make!(:NYE)
+      @event_skydiving = Event.make!(:skydiving)
       @interest = Interest.make!
       @another_interest = Interest.make!(:bad)
       @timmy = Organiser.make!(:timmy)
       @sally = Organiser.make!(:sally)
+      @emily = Organiser.make!
       @event.members << @timmy
       @timmy.happenings << @event
+      @emily.happenings << @event
+      @timmy.happenings << @event_nye
+      @timmy.happenings << @event_skydiving
       @timmy.interests << @interest
       @sally.interests << @interest
+      @emily.interests << @interest
       @timmy.interests << @another_interest
       @recommendations = @sally.get_recommendations
     end
 
     it "should recommend Timmy's event to Sally" do
+      binding.pry
       @recommendations.should_not eq(nil)
       @recommendations.first.should eq(@event)
     end 

@@ -9,6 +9,11 @@ class Organiser < ActiveRecord::Base
   has_many :interests, :through => :likes
   has_many :likes
   has_many :recommendations
+  has_many :organisers do 
+    def likeminded(e)
+      e.members.where("likes.interest_id in (?)", proxy_association.owner.interest_ids).joins(:likes => :interest).uniq
+    end
+  end
 
   def apostrophe_position
     if self.name[-1,1] != "s"
@@ -94,7 +99,36 @@ class Organiser < ActiveRecord::Base
         end
       end
     end
+    # get_recommendation_rank(recommended_events)
     recommended_events
+  end
+
+  def get_recommendation_rank(events_array)
+    events_array.each do |e|
+      @found = false
+      self.recommendations.each do |r|
+        if r.event == e
+          binding.pry
+           @rec = self.recommendations.find_by_event_id(e.id)
+           @rec.update_attributes({:rank => 2})
+          # @recommendation = Recommendation.find_by_event_id(e.id)
+          # @recommendation.rank += 1
+          binding.pry
+          # self.recommendations << @recommendation
+          # @recommendation.save!
+          @found = true
+          break
+        end
+      end
+      while @found == false do
+        @recommendation = Recommendation.new
+        @recommendation.rank = 1
+        @recommendation.event_id = e.id
+        @recommendation.organiser_id = self.id
+        self.recommendations << @recommendation
+        break
+      end
+    end    
   end
 
   # has_many :popular_interests, -> {select("interests.*").joins(:likes).group(:interest_id).having("count(interest_id) > 1")}, :class_name => "Interest",

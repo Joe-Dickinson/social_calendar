@@ -39,6 +39,20 @@ Event.blueprint do
   organiser 
 end
 
+Event.blueprint(:NYE) do
+  title { "New Years Eve"}
+  url { "https://www.example.com" }
+  description { Faker::Lorem.words(50).join(" ")}
+  organiser 
+end
+
+Event.blueprint(:skydiving) do
+  title { "Skydiving"}
+  url { "https://www.example.com" }
+  description { Faker::Lorem.words(50).join(" ")}
+  organiser 
+end
+
 Interest.blueprint do
   tag { "Star Wars" }
 end
