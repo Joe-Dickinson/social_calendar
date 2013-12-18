@@ -27,7 +27,7 @@ class EventsController < ApplicationController
   def update
     @event = Event.find(params[:id])
     if @event.update_attributes(event_params)
-      redirect_to organiser_event_path, alert: "Your event was updated"
+      redirect_to organiser_event_path, notice: "Your event was updated"
     else
       render edit_organiser_event(@event.organiser, @event)
     end
@@ -41,6 +41,6 @@ class EventsController < ApplicationController
 
   private
   def event_params
-    params.require(:event).permit(:title, :description, :url, :organiser_id, :"start_date(1i)", :"start_date(2i)", :"start_date(3i)", :"start_date(4i)", :"start_date(5i)")
+    params.require(:event).permit(:title, :description, :url, :organiser_id, :"start_date(1i)", :"start_date(2i)", :"start_date(3i)", :"start_date(4i)", :"start_date(5i)", :image_url)
   end
 end

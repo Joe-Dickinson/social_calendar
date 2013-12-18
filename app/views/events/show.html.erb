@@ -4,6 +4,8 @@
 
 <h3> Hosted By: <%= link_to @event.organiser.name, organiser_profile_path(@event.organiser) %> </h3>
 
+<%= image_tag @event.image_url %>
+
 <div> <b> Starts: </b> <%= @event.start_date %> </h4> </div>
 <br>
 <div> <%= @event.description %> </div>
@@ -20,3 +22,5 @@
 <div>
   <%= link_to "Back to Events", organiser_path(current_organiser) %>
 </div>
+
+<div class="end-padding"> </div>
