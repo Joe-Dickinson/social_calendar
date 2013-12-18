@@ -7,9 +7,7 @@ class OrganisersController < ApplicationController
   end
 
   def show
-    # @events = Event.all 
-    # @events = @events.order(:created_at => :desc)
-    @events = Event.paginate(:page => params[:page], :per_page => 5)
+    @events = Event.paginate(:page => params[:page], :per_page => 5, :order => "start_date DESC")
     @organiser = current_organiser
   end
 
@@ -51,7 +49,7 @@ class OrganisersController < ApplicationController
 
   def similar
     @organiser = Organiser.find(params[:id])
-    @similar = @organiser.organisers.likeminded(@organiser.happenings.first)
+    @similar = @organiser.get_similar
   end
 
   def recommended
@@ -61,6 +59,18 @@ class OrganisersController < ApplicationController
 
   def hosting 
     @organiser = Organiser.find(params[:id])
+  end
+
+  def today
+    @organiser = current_organiser
+    @events = Event.where("start_date > ? AND start_date < ?", Time.now.midnight, Date.tomorrow.midnight.to_datetime).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
+    render "organisers/show"
+  end
+
+  def tomorrow
+    @organiser = current_organiser
+    @events = Event.where("start_date > ? AND start_date < ?", Date.tomorrow.midnight, (Date.tomorrow+1).midnight.to_datetime).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
+    render "organisers/show"
   end
 
   private

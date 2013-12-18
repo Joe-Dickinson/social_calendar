@@ -13,44 +13,18 @@
   <li><%= link_to "Recommended Events", recommended_path(@organiser) %></li>
 </ul>
 
+<div class="pagination">
+  <%= will_paginate @events, renderer: BootstrapPagination::Rails %>
+</div>
+
 <div>
   Welcome <%= @organiser.name %> 
 </div>
 
 <br>
 
-  <h2> All Events </h2>
+<h2> All Events </h2>
 
-<% @events.each do |e| %>
-  <h3> <%= link_to e.title, organiser_event_path(e.organiser, e) %> </h3>
-  <div> <b> Starts: </b> <%= e.start_date %> </div>
-  <h4> <%= link_to e.url, "http://#{e.url}" %> </h4>
-  <div> <%= truncate(e.description, :length => 200) %> 
-    <%= link_to "(Continue)", organiser_event_path(e.organiser, e) %> </div>
-
-  <h4> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h4>
-
-  <% if e.organiser != current_organiser %>
-    <% if e.members.include?(current_organiser) %>
-      <div> <%= button_to "Cancel Attendance", cancel_organiser_happening_path(current_organiser, e), :class => "btn btn-success disabled" %> </div>
-
-    <% else %>
-     <div class="float-left"> <%= button_to "Attend", join_organiser_happening_path(current_organiser, e), :class => "btn btn-success" %> </div> 
-      <div> <%= button_to "Not Interested", organiser_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>      
- 
-    <% end %>
-  <% else %>
-    <div> <%= button_to "Cancel This Event", organiser_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>
-  <% end %>
-
-  <div> <b> People going to this event: </b>
-    <%=link_to e.organiser.name.strip, organiser_profile_path(e.organiser)%>
-    <%e.members.each do |m|%>
-      <%=link_to ", #{m.name.strip}", organiser_profile_path(m)%>
-    <%end%>
-  </div>
-<% end %>
-
-<%= will_paginate @events, renderer: BootstrapPagination::Rails %>
+<%= render "event" %>
 
 <div class="end-padding"> </div>

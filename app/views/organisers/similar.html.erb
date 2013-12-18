@@ -15,9 +15,10 @@
 
 
 <h3> Similar to <%= @organiser.name %> </h3>
- 
+
 <% @similar.each do |o| %>
   <% if o != @organiser %>
+
     <h4> <%= link_to o.name, organiser_profile_path(o) %> </h4>
     likes: 
     <br>

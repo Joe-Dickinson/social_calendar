@@ -14,6 +14,10 @@ SocialCalendar::Application.routes.draw do
       :happening
     end
 
+    # collection do
+    #   resources :navigation, :only => [:new, :edit, :create, :remove]
+    # end
+
     collection do
       resources :interests, :only => [:new, :edit, :index, :create, :remove]
     end
@@ -21,7 +25,8 @@ SocialCalendar::Application.routes.draw do
     resources :events
   end
   # resources :events
-
+  get "organiser/:id/today", :to => "organisers#today", :as => "today"
+  get "organiser/:id/tomorrow", :to => "organisers#tomorrow", :as => "tomorrow"
   get "organiser/:id/hosting", :to => "organisers#hosting", :as => "hosting"
   get "organiser/:id/recommended", :to => "organisers#recommended", :as => "recommended"
   get "organiser/:id/similar", :to => "organisers#similar", :as => "similar"

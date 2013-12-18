@@ -29,7 +29,6 @@ describe Organiser do
     end
 
     it "should recommend Timmy's event to Sally" do
-      binding.pry
       @recommendations.should_not eq(nil)
       @recommendations.first.should eq(@event)
     end 

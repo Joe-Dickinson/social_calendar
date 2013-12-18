@@ -15,6 +15,19 @@ class Organiser < ActiveRecord::Base
     end
   end
 
+  def get_similar
+    @similar = []
+    self.happenings.each do |h|
+      organisers_array = self.organisers.likeminded(h)
+      organisers_array.each do |o|
+        unless o == nil || o == self
+          @similar << o
+        end
+      end
+    end
+    @similar.uniq
+  end
+
   def recommended_events
     Event.where("likes.interest_id in (?)", self.interest_ids).joins(:likes => :interest).uniq
   end
