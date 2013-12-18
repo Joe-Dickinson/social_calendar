@@ -37,6 +37,8 @@ gem 'faker'
 gem "therubyracer"
 gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
 gem "twitter-bootstrap-rails"
+gem "will_paginate-bootstrap"
+gem 'will_paginate', '~> 3.0'
 gem 'rails_12factor', group: :production
 
 group :test, :development do

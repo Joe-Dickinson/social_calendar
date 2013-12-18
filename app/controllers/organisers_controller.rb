@@ -7,8 +7,9 @@ class OrganisersController < ApplicationController
   end
 
   def show
-    @events = Event.all
-    @events = @events.order(:created_at => :desc)
+    # @events = Event.all 
+    # @events = @events.order(:created_at => :desc)
+    @events = Event.paginate(:page => params[:page], :per_page => 5)
     @organiser = current_organiser
   end
 
@@ -56,6 +57,10 @@ class OrganisersController < ApplicationController
   def recommended
     @organiser = Organiser.find(params[:id])
     @recommended = @organiser.recommended_events
+  end
+
+  def hosting 
+    @organiser = Organiser.find(params[:id])
   end
 
   private

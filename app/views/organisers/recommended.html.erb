@@ -1,5 +1,12 @@
+<% content_for :sidebar do %>
+
+  <%= render "sidebar" %>
+
+<% end %>
+
 <ul class="nav nav-tabs">
     <li><%= link_to "Events Feed", organiser_path(@organiser) %> </li>
+    <li><%= link_to "Your Events", hosting_path(@organiser) %></li>
   <li><%= link_to "Similar to You", similar_path(@organiser) %></li>
   <li class="active">
     <%= link_to "Recommended Events", recommended_path(@organiser) %>

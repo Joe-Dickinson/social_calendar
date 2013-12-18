@@ -22,6 +22,7 @@ SocialCalendar::Application.routes.draw do
   end
   # resources :events
 
+  get "organiser/:id/hosting", :to => "organisers#hosting", :as => "hosting"
   get "organiser/:id/recommended", :to => "organisers#recommended", :as => "recommended"
   get "organiser/:id/similar", :to => "organisers#similar", :as => "similar"
   get "organiser/:organiser_id/interest/:id/remove", :to => "interests#remove", :as => "remove_interest"

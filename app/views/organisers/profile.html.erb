@@ -65,7 +65,9 @@
     <h4 class="events_attending_title"> <%= @organiser.name %> is going to </h4>
     <ul>
       <% @organiser.happenings.each do |h| %>
-        <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
+        <% if h.organiser != @organiser %>
+          <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
+        <% end %>
       <% end %>
     </ul>
   </div>
