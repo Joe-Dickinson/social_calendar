@@ -73,6 +73,11 @@ class OrganisersController < ApplicationController
     render "organisers/show"
   end
 
+  def going_to
+    @organiser = current_organiser
+    @events = @organiser.happenings
+  end
+
   private
   def profile_params
     params.require(:organiser).permit(:name, :bio, :image_url)

@@ -7,8 +7,9 @@
 <ul class="nav nav-tabs">
     <li><%= link_to "Events Feed", organiser_path(@organiser) %> </li>
   <li class="active">
-    <%= link_to "Your Events", hosting_path(@organiser) %>
+    <%= link_to "Hosted Events", hosting_path(@organiser) %>
   </li>
+  <li><%= link_to "Going To", going_to_path(@organiser) %></li>
   <li><%= link_to "Similar to You", similar_path(@organiser) %></li>
   <li><%= link_to "Recommended Events", recommended_path(@organiser) %></li>
 </ul>
@@ -21,13 +22,26 @@
 <% end %>
 
 <% @organiser.events.each do |e| %>
-  <h3> <%= link_to e.title, organiser_event_path(e.organiser, e) %> </h3>
-  <div> <b> Starts: </b> <%= e.start_date %> </div>
-  <h4> <%= link_to e.url, "http://#{e.url}" %> </h4>
-  <div> <%= truncate(e.description, :length => 200) %> 
-    <%= link_to "(Continue)", organiser_event_path(e.organiser, e) %> </div>
 
-  <h4> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h4>
+  <div class="row">
+    <div class="span3"> 
+      <h3> <%= link_to e.title, organiser_event_path(e.organiser, e) %> </h3>
+      <%= image_tag e.image_url %> 
+    </div>
+    <div> </div>
+    <div class="span4"> 
+      <br>
+        <% if e.start_date != nil %>
+      <div> <b> Starts: </b> <%= e.start_date.strftime('%A, %d %B, %Y - %H:%M') %> </div>
+        <% end %>
+      <h4> <%= link_to e.url, "http://#{e.url}" %> </h4>
+      <div> <%= truncate(e.description, :length => 200) %> 
+        <%= link_to "(Continue)", organiser_event_path(e.organiser, e) %> </div>
+
+      <h4> Hosted by: <%=link_to e.organiser.name, organiser_profile_path(e.organiser) %> </h4>
+    </div>
+  </div>
+  <br>
 
   <div> <%= button_to "Cancel This Event", organiser_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>
 

@@ -1,4 +1,6 @@
+
 <% @events.each do |e| %>
+
   <div class="row">
     <div class="span3"> 
       <h3> <%= link_to e.title, organiser_event_path(e.organiser, e) %> </h3>
@@ -8,7 +10,7 @@
     <div class="span4"> 
       <br>
         <% if e.start_date != nil %>
-      <div> <b> Starts: </b> <%= e.start_date.strftime('%A, %d %B - %H:%M') %> </div>
+      <div> <b> Starts: </b> <%= e.start_date.strftime('%A, %d %B, %Y - %H:%M') %> </div>
         <% end %>
       <h4> <%= link_to e.url, "http://#{e.url}" %> </h4>
       <div> <%= truncate(e.description, :length => 200) %> 
@@ -40,10 +42,5 @@
   </div>
 <div class="end-padding"> </div>
 <% end %>
-
-
-<div class="pagination">
-  <%= will_paginate @events, renderer: BootstrapPagination::Rails %>
-</div>
 
 <div class="end-padding"> </div>

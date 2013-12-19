@@ -6,7 +6,8 @@
 
 <ul class="nav nav-tabs">
     <li><%= link_to "Events Feed", organiser_path(@organiser) %> </li>
-    <li><%= link_to "Your Events", hosting_path(@organiser) %></li>
+    <li><%= link_to "Hosted Events", hosting_path(@organiser) %></li>
+    <li><%= link_to "Going To", going_to_path(@organiser) %></li>
   <li class="active">
     <%= link_to "Similar to You", similar_path(@organiser) %> 
   </li>

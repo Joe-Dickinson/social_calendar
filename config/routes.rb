@@ -25,6 +25,10 @@ SocialCalendar::Application.routes.draw do
     resources :events
   end
   # resources :events
+  get "organiser/:id/past", :to => "organisers#past", :as => "past"
+  get "organiser/:id/going_to", :to => "organisers#going_to", :as => "going_to"
+  get "organiser/:id/this_week", :to => "organisers#this_week", :as => "this_week"
+  get "organiser/:id/next_week", :to => "organisers#next_week", :as => "next_week"
   get "organiser/:id/today", :to => "organisers#today", :as => "today"
   get "organiser/:id/tomorrow", :to => "organisers#tomorrow", :as => "tomorrow"
   get "organiser/:id/hosting", :to => "organisers#hosting", :as => "hosting"
