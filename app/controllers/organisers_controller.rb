@@ -54,7 +54,8 @@ class OrganisersController < ApplicationController
 
   def recommended
     @organiser = Organiser.find(params[:id])
-    @recommended = @organiser.recommended_events
+    @events = @organiser.recommended_events
+    @events = @events - @organiser.happenings
   end
 
   def hosting 
