@@ -73,6 +73,24 @@ class OrganisersController < ApplicationController
     render "organisers/show"
   end
 
+  def this_week
+    @organiser = current_organiser
+    @events = Event.where("start_date > ? AND start_date < ?", Date.today.midnight, (Date.tomorrow+7).midnight.to_datetime).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
+    render "organisers/show"
+  end
+
+  def next_week
+    @organiser = current_organiser
+    @events = Event.where("start_date > ? AND start_date < ?", (Date.today.midnight+7), (Date.tomorrow+14).midnight.to_datetime).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
+    render "organisers/show"
+  end
+
+  def past
+    @organiser = current_organiser
+    @events = Event.where("start_date < ?", Date.today.midnight).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
+    render "organisers/show"
+  end
+
   def going_to
     @organiser = current_organiser
     @events = @organiser.happenings
