@@ -7,7 +7,7 @@ class OrganisersController < ApplicationController
   end
 
   def show
-    @events = Event.paginate(:page => params[:page], :per_page => 5, :order => "start_date DESC")
+    @events = Event.paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
     @organiser = current_organiser
   end
 

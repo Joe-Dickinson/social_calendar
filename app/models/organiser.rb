@@ -11,19 +11,15 @@ class Organiser < ActiveRecord::Base
   has_many :recommendations
   has_many :organisers do 
     def likeminded(e)
-      e.members.where("likes.interest_id in (?)", proxy_association.owner.interest_ids).joins(:likes => :interest).uniq
+      e.members.where("likes.interest_id in (?) AND likes.organiser_id != ?", 
+        proxy_association.owner.interest_ids, proxy_association.owner.id).joins(:likes)
     end
   end
 
   def get_similar
     @similar = []
     self.happenings.each do |h|
-      organisers_array = self.organisers.likeminded(h)
-      organisers_array.each do |o|
-        unless o == nil || o == self
-          @similar << o
-        end
-      end
+      @similar += self.organisers.likeminded(h)
     end
     @similar.uniq
   end

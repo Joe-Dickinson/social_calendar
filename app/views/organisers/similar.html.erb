@@ -16,31 +16,40 @@
 
 
 <h3> Similar to <%= @organiser.name %> </h3>
+<div class="row">
+  <div class="span3">
+    <% @similar.each do |o| %>
+      <% if o != @organiser %>
 
-<% @similar.each do |o| %>
-  <% if o != @organiser %>
+    <h4> <%= link_to o.name, organiser_profile_path(o), :class => "name" %> </h4>
+    <%= image_tag o.image_url %>
+  </div> <!--end of span3-->
+  <div> </div>
+      <div class="span4">
+        <div class="space-top"></div>
+        likes: 
+        <div class="space"> </div>
+        <% o.interests.each do |i| %>
+          <%=i.tag%>
+        <% end %>
+        <div class="space"></div>
+        <br>
+        <% unless o.events.blank? %>
+          <div> <b> Hosting: </b> </div>
+          <ul>
+          <% o.events.each do |e| %>
+            <li> <%= link_to e.title, organiser_event_path(o, e) %> </li>
+          <% end %>
+          </ul>
+        <% end %>
 
-    <h4> <%= link_to o.name, organiser_profile_path(o) %> </h4>
-    likes: 
-    <br>
-    <% o.interests.each do |i| %>
-      <%=i.tag%>
-    <% end %>
-
-    <% unless o.events.blank? %>
-      <div> <b> Hosting: </b> </div>
-      <ul>
-      <% o.events.each do |e| %>
-        <li> <%= link_to e.title, organiser_event_path(o, e) %> </li>
+        <div> <b> Going to: </b> </div>
+        <ul>
+          <% o.happenings.each do |h| %>
+            <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
+          <% end %>
+        </ul>
       <% end %>
-      </ul>
     <% end %>
-
-    <div> <b> Going to: </b> </div>
-    <ul>
-      <% o.happenings.each do |h| %>
-        <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
-      <% end %>
-    </ul>
-  <% end %>
-<% end %>
+  </div> <!--end of span4-->
+<div> <!--end of row-->
