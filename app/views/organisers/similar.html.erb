@@ -14,9 +14,9 @@
   <li><%= link_to "Recommended Events", recommended_path(@organiser) %></li>
 </ul>
 
+<h3> Similar to <%= @organiser.name %> </h3>
 
 <div class="row">
-<h3> Similar to <%= @organiser.name %> </h3>
     <% @similar.each do |o| %>
       <% if o != @organiser %>
 
