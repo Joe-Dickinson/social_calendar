@@ -15,12 +15,12 @@
 </ul>
 
 
-<h3> Similar to <%= @organiser.name %> </h3>
 <div class="row">
-  <div class="span3">
+<h3> Similar to <%= @organiser.name %> </h3>
     <% @similar.each do |o| %>
       <% if o != @organiser %>
 
+  <div class="span3 snap-left">
     <h4> <%= link_to o.name, organiser_profile_path(o), :class => "name" %> </h4>
     <%= image_tag o.image_url %>
     </div> <!--end of span3-->
@@ -49,7 +49,8 @@
             <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
           <% end %>
         </ul>
+      </div> <!--end of span4-->
       <% end %>
     <% end %>
-  </div> <!--end of span4-->
-<div> <!--end of row-->
+</div> <!--end of row-->
+<div class="end-padding"> </div>
