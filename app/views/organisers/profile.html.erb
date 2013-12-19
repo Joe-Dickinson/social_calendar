@@ -11,7 +11,7 @@
 
     <ul class="interests">
       <% @organiser.interests.each do |i| %>
-        <li> <%= i.tag + " (#{i.id.to_s})" %> </li> <!--printing out ids for bug fixing-->
+        <li> <%= i.tag %> </li> 
         <% if @organiser == current_organiser %>
           <%= link_to "Remove", remove_interest_path(@organiser, i) %>
         <% end %>
@@ -22,8 +22,8 @@
     <h4> All interests </h4> 
     <ul>
       <% @interests.each do |i| %>
-        <li> <%= i.tag + " (#{i.id.to_s})" %> </li>
-        <%= "Fans: " + i.organisers.count.to_s %> <!--more bug fixing-->
+        <li> <%= i.tag %> </li>
+        <%= "Fans: " + i.organisers.count.to_s %> 
         <br>
       <% end %>
     </ul>
