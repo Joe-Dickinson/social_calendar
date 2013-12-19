@@ -23,4 +23,24 @@
   <%= link_to "Back to Events", organiser_path(current_organiser) %>
 </div>
 
+<% if @event.organiser != current_organiser %>
+    <% if @event.members.include?(current_organiser) %>
+      <div> <%= button_to "Cancel Attendance", cancel_organiser_happening_path(current_organiser, @event), :class => "btn btn-success disabled" %> </div>
+
+    <% else %>
+     <div class="float-left"> <%= button_to "Attend", join_organiser_happening_path(current_organiser, @event), :class => "btn btn-success" %> </div> 
+      <div> <%= button_to "Not Interested", organiser_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>      
+    <div class="end-padding"> </div>
+    <% end %>
+  <% else %>
+    <div> <%= button_to "Cancel This Event", organiser_event_path(@event.organiser, @event), :method => :delete, :class => :destroy, :class => "btn btn-danger" %> </div>
+  <% end %>
+
+  <div> <b> People going to this event: </b>
+    <%=link_to @event.organiser.name.strip, organiser_profile_path(@event.organiser)%>
+    <%@event.members.each do |m|%>
+      <%=link_to ", #{m.name.strip}", organiser_profile_path(m)%>
+    <%end%>
+  </div>
+
 <div class="end-padding"> </div>

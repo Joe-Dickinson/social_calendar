@@ -31,7 +31,7 @@
     <div class="end-padding"> </div>
     <% end %>
   <% else %>
-    <div> <%= button_to "Cancel This Event", organiser_path(current_organiser), :method => :get, :class => "btn btn-danger" %> </div>
+    <div> <%= button_to "Cancel This Event", organiser_event_path(current_organiser, e), :method => :delete, :class => :destroy, :class => "btn btn-danger" %> </div>
   <% end %>
 
   <div> <b> People going to this event: </b>
