@@ -1,5 +1,5 @@
 Feature: Similar Organiser
-  @wip
+ 
   Scenario: An organiser declares an interest
   Given that I am signed in
   And I am on the events feed page
@@ -8,7 +8,7 @@ Feature: Similar Organiser
   When I write Star Wars into the text box
   And I click add
   Then I should see Star Wars appear in my interests
-  @wip
+ 
   Scenario: An organiser is shown a similar organiser based on their mutual interests
   Given that I am signed in
   And I am on the events feed page

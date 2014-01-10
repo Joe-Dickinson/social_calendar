@@ -1,7 +1,7 @@
 class Event < ActiveRecord::Base
   has_many :participants, :through => :attendees
-  belongs_to :organiser
   has_many :attendees
+  belongs_to :organiser
   has_many :members, :class_name => "Organiser", :through => :guests
   has_many :guests
   has_many :likes, :through => :members

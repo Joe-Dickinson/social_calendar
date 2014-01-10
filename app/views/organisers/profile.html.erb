@@ -54,27 +54,8 @@
       <%= link_to "Back to Events", organiser_path(current_organiser) %>
     </div>
 
-    <div class="events_hosting"> 
-      <% if @organiser.events.count != 0 %>
-        <h4 class="events_hosting_title"> Events <%= @organiser.name %> is hosting </h4>
-        <ul>
-          <% @organiser.events.each do |e| %>
-            <li> <%= link_to e.title, organiser_event_path(e.organiser, e) %> </li>
-          <% end %>
-        </ul>
-      <% end %>
-    </div>
+    <%= render "personal_events", :o => @organiser %>
 
-    <div class="events_attending"> 
-      <h4 class="events_attending_title"> <%= @organiser.name %> is going to </h4>
-      <ul>
-        <% @organiser.happenings.each do |h| %>
-          <% if h.organiser != @organiser %>
-            <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
-          <% end %>
-        <% end %>
-      </ul>
-    </div>
   </div>
 
 </div> <!--end of main_content-->
