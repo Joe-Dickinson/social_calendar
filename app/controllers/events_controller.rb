@@ -42,31 +42,31 @@ class EventsController < ApplicationController
   def today
     #@organiser = current_organiser
     @events = Event.where("start_date > ? AND start_date < ?", Time.now.midnight, Date.tomorrow.midnight.to_datetime).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
-    render "organisers/show"
+    render "events/index"
   end
 
   def tomorrow
     #@organiser = current_organiser
     @events = Event.where("start_date > ? AND start_date < ?", Date.tomorrow.midnight, (Date.tomorrow+1).midnight.to_datetime).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
-    render "organisers/show"
+    render "events/index"
   end
 
   def this_week
     #@organiser = current_organiser
     @events = Event.where("start_date > ? AND start_date < ?", Date.today.midnight, (Date.tomorrow+7).midnight.to_datetime).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
-    render "organisers/show"
+    render "events/index"
   end
 
   def next_week
     #@organiser = current_organiser
     @events = Event.where("start_date > ? AND start_date < ?", (Date.today.midnight+7), (Date.tomorrow+14).midnight.to_datetime).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
-    render "organisers/show"
+    render "events/index"
   end
 
   def past
     #@organiser = current_organiser
     @events = Event.where("start_date < ?", Date.today.midnight).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
-    render "organisers/show"
+    render "events/index"
   end
 
   def going_to
