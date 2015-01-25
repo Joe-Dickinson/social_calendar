@@ -31,6 +31,8 @@ SocialCalendar::Application.routes.draw do
     resources :events
   end
 
+  get "admin/index", :to => "admin#index", :as => "admin_index"
+
   get "events/all", :to => "events#all", :as => "events_all"
   get "events/today", :to => "events#today", :as => "events_today"
   get "events/tomorrow", :to => "events#tomorrow", :as => "events_tomorrow"

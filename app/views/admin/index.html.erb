@@ -1,0 +1,17 @@
+<% @organisers.each do |organiser| %>
+  <div> name: <%= organiser.name %> </div>
+  <div> id: <%= organiser.id %> </div>
+  <div> email: <%= organiser.email %> </div>
+  <div> bio: <%= organiser.bio %> </div>
+  <% if full_admin_overview? %>
+    <div> created at: <%= organiser.created_at %> </div>
+    <div> updated at: <%= organiser.updated_at %> </div>
+    <div> sign in count: <%= organiser.sign_in_count %> </div>
+    <div> current sign in at: <%= organiser.current_sign_in_at %> </div>
+    <div> last sign in at: <%= organiser.last_sign_in_at %> </div>
+    <div> current sign in ip: <%= organiser.current_sign_in_ip %> </div>
+    <div> last sign in ip: <%= organiser.last_sign_in_ip %> </div>
+  <% end %>
+
+  <div style="margin-top: 50px"> </div>
+<% end %>
