@@ -23,8 +23,20 @@ SocialCalendar::Application.routes.draw do
       resources :interests, :only => [:new, :edit, :index, :create, :remove]
     end
 
+    # why doesn't this work?
+    collection do
+      resources :events, :only => [:today, :tomorrow, :this_week, :next_week, :past]
+    end
+
     resources :events
   end
+
+  get "events/today", :to => "events#today", :as => "events_today"
+  get "events/tomorrow", :to => "events#tomorrow", :as => "events_tomorrow"
+  get "events/this_week", :to => "events#this_week", :as => "events_this_week"
+  get "events/next_week", :to => "events#next_week", :as => "events_next_week"
+  get "events/past", :to => "events#past", :as => "events_past"
+
   # resources :events
   get "organiser/:id/past", :to => "organisers#past", :as => "past"
   get "organiser/:id/going_to", :to => "organisers#going_to", :as => "going_to"
