@@ -12,6 +12,12 @@ class EventsController < ApplicationController
     redirect_to organiser_path(current_organiser)
   end
 
+  # § same as index
+  def all
+    @events = Event.paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
+    render "events/index"
+  end
+
   def index
     @events = Event.paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
   end

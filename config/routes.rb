@@ -23,7 +23,7 @@ SocialCalendar::Application.routes.draw do
       resources :interests, :only => [:new, :edit, :index, :create, :remove]
     end
 
-    # why doesn't this work?
+    # why doesn't this work? Inside devise?
     collection do
       resources :events, :only => [:today, :tomorrow, :this_week, :next_week, :past]
     end
@@ -31,6 +31,7 @@ SocialCalendar::Application.routes.draw do
     resources :events
   end
 
+  get "events/all", :to => "events#all", :as => "events_all"
   get "events/today", :to => "events#today", :as => "events_today"
   get "events/tomorrow", :to => "events#tomorrow", :as => "events_tomorrow"
   get "events/this_week", :to => "events#this_week", :as => "events_this_week"

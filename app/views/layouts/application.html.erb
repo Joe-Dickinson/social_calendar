@@ -8,19 +8,23 @@
 </head>
 <body>
 
-<% if organiser_signed_in? %>
+<%# if organiser_signed_in? %>
   <div class="navbar navbar-fixed-top navbar-inverse">
     <div class="navbar-inner">
       <ul class="nav" style="width: 80%">
         <li> <div class="span1"></div> </li>
-        <li> <%= link_to "Events Feed", organiser_path(current_organiser), :class => "brand" %> </li>
-        <li> <%= link_to "Your profile", organiser_profile_path(current_organiser) %> </li>
-        <li><%= link_to "Create New Event", new_organiser_event_path(current_organiser) %></li>
-        <li style="float: right;"> <%= link_to "Sign Out #{current_organiser.name}", destroy_organiser_session_path, :method => :delete %></li>
+        <li> <%= link_to "Events Feed", events_all_path, :class => "brand" %> </li>
+        <% if current_organiser %>
+          <li> <%= link_to "Your profile", organiser_profile_path(current_organiser) %> </li>
+          <li><%= link_to "Create New Event", new_organiser_event_path(current_organiser) %></li>
+          <li style="float: right;"> <%= link_to "Sign Out #{current_organiser.name}", destroy_organiser_session_path, :method => :delete %></li>
+        <% else %>
+          <li style="float: right;"> <%= link_to "Sign in as organiser", new_organiser_session_path %></li>
+        <% end %>
       </ul>
     </div>
   </div>
-<% end %>
+<%# end %>
 
 <div class="row">
 
