@@ -3,7 +3,7 @@
     <h4 class="events_hosting_title"> <%= o.name %> is hosting: </h4>
     <ul>
     <% o.events.each do |e| %>
-      <% if current_organiser.happenings.include?(e) %>
+      <% if current_organiser && current_organiser.happenings.include?(e) %>
         <li> <b> <%= link_to e.title, organiser_event_path(o, e) %> </b> (You're going) </li>
       <% else %>
         <li> <%= link_to e.title, organiser_event_path(o, e) %> </li>
@@ -20,9 +20,9 @@
       <% if o == current_organiser %>
         <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
       <% else %>
-        <% if current_organiser.happenings.include?(h) %>
+        <% if current_organiser && current_organiser.happenings.include?(h) %>
           <li> <b> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </b> (You're going) </li>
-        <% elsif current_organiser.events.include?(h) %>
+        <% elsif current_organiser && current_organiser.events.include?(h) %>
           <li> <b> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </b> (You're hosting) </li>
         <% else %>
           <li> <%= link_to h.title, organiser_event_path(h.organiser, h) %> </li>
