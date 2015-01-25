@@ -2,7 +2,8 @@ SocialCalendar::Application.routes.draw do
   # You can have the root of your site routed with "root"
   # devise_scope :participants do
   # root 'participants#index'
-  root 'pages#home'
+  #root 'pages#home'
+  root 'events#index'
     #, :to => redirect('/participants/sign_in')
   # end
   

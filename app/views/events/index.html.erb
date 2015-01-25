@@ -1,0 +1,22 @@
+<%# content_for :sidebar do %>
+
+  <%#= render "sidebar" %>
+
+<%# end %>
+
+<div class="pagination">
+  <%= will_paginate @events, renderer: BootstrapPagination::Rails %>
+</div>
+
+<br>
+
+<h2> All Events </h2>
+
+<%= render "event" %>
+
+
+<div class="pagination">
+  <%= will_paginate @events, renderer: BootstrapPagination::Rails %>
+</div>
+
+<div class="end-padding"> </div>
