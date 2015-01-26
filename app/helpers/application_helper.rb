@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  def full_admin_overview?
+  def is_super_admin?
     true
   end
 

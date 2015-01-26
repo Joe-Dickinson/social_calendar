@@ -3,7 +3,7 @@
   <div> id: <%= organiser.id %> </div>
   <div> email: <%= organiser.email %> </div>
   <div> bio: <%= organiser.bio %> </div>
-  <% if full_admin_overview? %>
+  <% if is_super_admin? %>
     <div> created at: <%= organiser.created_at %> </div>
     <div> updated at: <%= organiser.updated_at %> </div>
     <div> sign in count: <%= organiser.sign_in_count %> </div>
