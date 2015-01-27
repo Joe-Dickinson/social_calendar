@@ -12,9 +12,20 @@ class EventsController < ApplicationController
     redirect_to organiser_path(current_organiser)
   end
 
+  def post_search
+    # § Clean this up
+    redirect_to :action => "all", :search_term => params["search_term"], :date_from => params["date_from"],
+    :date_to => params["date_to"], :tags => params["tags"]
+  end
+
   # § same as index
   def all
-    @events = Event.paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
+    # § clean this up too.
+    params["date_to"] = Date.today + 10000000 if params["date_to"].empty?
+
+    # Works. getting 5 results but the count is 9 for some reason. § Can it be broken up?
+    @events = Event.where("start_date >= ? AND start_date <= ?", params["date_from"], params["date_to"]).paginate(:page => params[:page], :per_page => 5, :order => "start_date ASC")
+
     render "events/index"
   end
 
